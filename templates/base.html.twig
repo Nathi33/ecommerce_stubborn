@@ -28,8 +28,14 @@
                         </div>
                         <ul class="navbar-links">
                             <li><a href="{{ path('app_home') }}">Accueil</a></li>
-                            <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
-                            <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <li><a href="{{ path('app_shop') }}">Boutique</a></li>
+                                <li><a href="{{ path('app_cart') }}">Panier</a></li>
+                                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+                            {% else %}
+                                <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                                <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                            {% endif %}
                         </ul>
                     </div>
 
