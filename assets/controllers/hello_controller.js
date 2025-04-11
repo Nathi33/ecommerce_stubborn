@@ -1,4 +1,4 @@
-import { Controller } from '@hotwired/stimulus';
+import { Controller } from "@hotwired/stimulus";
 
 /*
  * This is an example Stimulus controller!
@@ -9,8 +9,28 @@ import { Controller } from '@hotwired/stimulus';
  *
  * Delete this file or adapt it for your use!
  */
+
 export default class extends Controller {
-    connect() {
-        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';
-    }
+  connect() {
+    // Ne rien modifier ici, pas de remplacement de texte
+    console.log("Le contrôleur Stimulus est maintenant actif!");
+  }
+
+  // Méthode pour gérer le clic sur le bouton
+  handleClick(event) {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
+    const button = event.currentTarget; // Récupère l'élément cliqué
+    const text = button.innerText; // Récupère le texte du bouton
+
+    // Remplace le texte du bouton par "Chargement..."
+    button.innerText = "Chargement...";
+
+    // Récupère l'URL de redirection à partir de l'attribut data-url
+    const url = button.getAttribute("data-url");
+
+    // Simule une attente de 2 secondes avant de rediriger
+    setTimeout(() => {
+      window.location.href = url; // Redirection vers la page d'inscription
+    }, 2000);
+  }
 }

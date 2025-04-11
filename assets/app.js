@@ -1,10 +1,16 @@
-import "./bootstrap.js";
-/*
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
- */
+// Import du SCSS principal
 import "./styles/app.scss";
 
-console.log("This log comes from assets/app.js - welcome to AssetMapper! 🎉");
+// Import JS spécifiques
+import "./showAndHiddePassword.js";
+
+// Configuration Stimulus
+import { Application } from "@hotwired/stimulus";
+import HelloController from "./controllers/hello_controller";
+
+// Démarrage de l'application Stimulus
+const application = Application.start();
+application.register("hello", HelloController);
+
+// Log de bienvenue
+console.log("🎉 Webpack Encore est en place avec Stimulus !");

@@ -1,0 +1,13 @@
+.register-form label {
+  display: block;
+  margin-bottom: 5px; /* Ajoute un petit espace entre le label et le champ */
+}
+
+.register-form input,
+.register-form select,
+.register-form textarea {
+  display: block; /* Fais en sorte que l'input, le select, et le textarea soient en bloc */
+  width: 90%; /* Assure-toi que le champ prend toute la largeur disponible */
+  padding: 8px; /* Ajoute un peu de padding pour que ce soit plus lisible */
+  margin-bottom: 10px; /* Espace entre les champs */
+}

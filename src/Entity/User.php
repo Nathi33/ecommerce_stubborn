@@ -34,11 +34,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    #[ORM\Column(length: 180, unique: true)]
+    private ?string $username = null;
 
-    #[ORM\Column(length: 450)]
-    private ?string $delivery_address = null;
+    #[ORM\Column(type: 'string', length: 255, nullable: false)]
+    private ?string $deliveryAddress = null;
 
     #[ORM\Column]
     private bool $isVerified = false;
@@ -118,26 +118,26 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getName(): ?string
+    public function getUsername(): ?string
     {
-        return $this->name;
+        return $this->username;
     }
 
-    public function setName(string $name): static
+    public function setUsername(string $username): static
     {
-        $this->name = $name;
+        $this->username = $username;
 
         return $this;
     }
 
     public function getDeliveryAddress(): ?string
     {
-        return $this->delivery_address;
+        return $this->deliveryAddress;
     }
 
-    public function setDeliveryAddress(string $delivery_address): static
+    public function setDeliveryAddress(string $deliveryAddress): self
     {
-        $this->delivery_address = $delivery_address;
+        $this->deliveryAddress = $deliveryAddress;
 
         return $this;
     }

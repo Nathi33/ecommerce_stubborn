@@ -28,31 +28,38 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
+
+        // Formulaire lié à l'entité User
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // Récupération du mot de passe non mappé
             /** @var string $plainPassword */
             $plainPassword = $form->get('plainPassword')->getData();
+            $plainPasswordConfirm = $form->get('plainPasswordConfirm')->getData();
+            // Vérification que les mots de passe correspondent
+            if ($plainPassword !== $plainPasswordConfirm) {
+                $form->get('plainPasswordConfirm')->addError(new \Symfony\Component\Form\FormError('Les mots de passe ne correspondent pas.'));
+            } else {
+                // Hashage du mot de passe
+                $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
 
-            // encode the plain password
-            $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
+                // Envoi de l'email de confirmation
+                $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
+                    (new TemplatedEmail())
+                        ->from(new Address('stubborn@blabla.com', 'Stubborn'))
+                        ->to((string) $user->getEmail())
+                        ->subject('Please Confirm your Email')
+                        ->htmlTemplate('registration/confirmation_email.html.twig')
+                );
 
-            $entityManager->persist($user);
-            $entityManager->flush();
+                $entityManager->persist($user);
+                $entityManager->flush();
 
-            // generate a signed url and email it to the user
-            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
-                (new TemplatedEmail())
-                    ->from(new Address('stubborn@blabla.com', 'Stubborn'))
-                    ->to((string) $user->getEmail())
-                    ->subject('Please Confirm your Email')
-                    ->htmlTemplate('registration/confirmation_email.html.twig')
-            );
-
-            // do anything else you need here, like send an email
-
-            return $security->login($user, AuthAuthenticator::class, 'main');
+                // Connexion automatique après inscription et envoi de l'email de confirmation
+                return $security->login($user, AuthAuthenticator::class, 'main');
+            }      
         }
 
         return $this->render('registration/register.html.twig', [

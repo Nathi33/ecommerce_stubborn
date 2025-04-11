@@ -11,6 +11,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -18,12 +19,21 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('agreeTerms', CheckboxType::class, [
-                'mapped' => false,
+            ->add('username', TextType::class, [
+                'label' => 'Nom d\'utilisateur',
                 'constraints' => [
-                    new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                    new NotBlank(['message' => 'Merci d\'entrer un nom d\'utilisateur']),
+                    new Length([
+                        'min' => 3,
+                        'minMessage' => 'Le nom d\'utilisateur doit faire au moins {{ limit }} caractères',
+                        'max' => 50,
                     ]),
+                ],
+            ])
+            ->add('deliveryAddress', TextType::class, [
+                'label' => 'Adresse de livraison',
+                'constraints' => [
+                    new NotBlank(['message' => 'Merci d\'entrer une adresse de livraison']),
                 ],
             ])
             ->add('plainPassword', PasswordType::class, [
@@ -33,12 +43,27 @@ class RegistrationFormType extends AbstractType
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Merci d\'entrer votre mot de passe',
                     ]),
                     new Length([
                         'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
+                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères',
+                        // longueur maximale autorisée par Symfony pour des raisons de sécurité
+                        'max' => 4096,
+                    ]),
+                ],
+            ])
+            ->add('plainPasswordConfirm', PasswordType::class, [
+                'mapped' => false,
+                'attr' => ['autocomplete' => 'new-password'],
+                'label' => 'Confirmer le mot de passe',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Merci de confirmer votre mot de passe',
+                    ]),
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères',
                         'max' => 4096,
                     ]),
                 ],
