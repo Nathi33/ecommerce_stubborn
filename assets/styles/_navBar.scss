@@ -1,0 +1,48 @@
+/* Style généraux de la navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Contenuer de la navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Logo de la navbar */
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Liens de la navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Style des liens de la navbar */
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/** Style des liens de la navbar au survol */
+.navbar-links a:hover {
+  color: #0f53f1;
+  text-decoration: underline;
+}

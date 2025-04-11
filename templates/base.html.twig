@@ -16,6 +16,26 @@
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+            <header>
+                <nav class="navbar">
+
+                    <div class="navbar-container">
+                        <div class="navbar-logo">
+                            <a href="{{ path('app_home') }}">
+                                <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+                            </a>
+                        </div>
+                        <ul class="navbar-links">
+                            <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                            <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                            <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </header>
+        {% endblock %}
         {% block body %}
         {% endblock %}
     </body>
