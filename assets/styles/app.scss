@@ -1,3 +1,6 @@
-body {
-    background-color: skyblue;
-}
+@use "./general";
+@use "./sections";
+@use "./-button";
+@use "./loginpage";
+@use "./-registration.scss";
+@use "./resetPassword";

@@ -1,0 +1,23 @@
+.login-form {
+  border: solid 1px black;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  width: 250px;
+  height: auto;
+}
+
+.register-form {
+  border: solid 1px black;
+  margin-top: 20px 0;
+  padding: 10px; /* Espacement interne */
+  width: 300px; /* Limite la largeur du formulaire */
+  height: auto; /* Ajuste la hauteur automatiquement */
+}
+
+.reset-password-form {
+  border: solid 1px black;
+  margin-top: 20px 0;
+  padding: 10px; /* Espacement interne */
+  width: 500px; /* Limite la largeur du formulaire */
+  height: auto; /* Ajuste la hauteur automatiquement */
+}
