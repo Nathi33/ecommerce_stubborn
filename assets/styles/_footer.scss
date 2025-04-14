@@ -1,0 +1,84 @@
+/* Style généraux du footer */
+.footer {
+  background-color: #333;
+  padding-top: 20px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Contenuer du footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Logo du footer */
+.footer-logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Liens du footer */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style des liens du footer */
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/** Style des liens du footer au survol */
+.footer-links a:hover {
+  color: #0f53f1;
+  text-decoration: underline;
+}
+
+/* Style des liens de contact du footer */
+.footer-contact {
+  font-size: 16px;
+}
+
+.footer-contact address {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #0f53f1;
+  text-decoration: underline;
+}
+
+/* Style du copyright du footer */
+.footer-copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+  border-top: solid 1px #444;
+  padding-top: 20px;
+}
