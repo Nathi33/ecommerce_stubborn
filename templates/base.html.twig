@@ -19,7 +19,6 @@
         {% block header %}
             <header>
                 <nav class="navbar">
-
                     <div class="navbar-container">
                         <div class="navbar-logo">
                             <a href="{{ path('app_home') }}">
@@ -38,11 +37,45 @@
                             {% endif %}
                         </ul>
                     </div>
-
                 </nav>
             </header>
         {% endblock %}
-        {% block body %}
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        {% block footer %}
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <a href="{{ path('app_home') }}">
+                            <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="footer-links">
+                        <h2>Informations légales :</h2>
+                        <a href="#">Mentions Légales</a>
+                        <a href="#">Données personnelles</a>
+                        <a href="#">Accessibilité</a>
+                        <a href="#">Conditions d'utilisation</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                    <div class="footer-contact">
+                        <h2>Adresse :</h2>
+                        <address>
+                            Piccadilly Circus<br>
+                            London W1J 0DA<br> 
+                            Royaume-Uni
+                        </address>
+                        <h2>Mail :</h2>
+                        <a href="mailto:stubborn@blabla.com">stubborn@blabla.com</a>
+                    </div>
+                    
+                </div>
+                <p class="footer-copyright">&copy; 2025 Stubborn. Tous droits réservés.</p>
+            </footer>
         {% endblock %}
     </body>
 </html>
