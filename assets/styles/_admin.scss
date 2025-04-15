@@ -1,0 +1,184 @@
+/******* Ajout sweatshirt *******/
+
+.form-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fdd;
+  border: solid 1px #000;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.image-wrapper {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-wrapper input[type="file"] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-end;
+  padding-left: 20px;
+}
+
+.form-fields > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields label {
+  margin-bottom: 10px;
+}
+
+.form-fields input {
+  width: 100px;
+}
+
+input[type="file"] {
+  white-space: normal;
+  overflow: hidden;
+}
+
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+  margin-right: 20px;
+}
+
+.button-click {
+  width: 200px;
+}
+
+/******* Liste sweatshirts *******/
+
+.sweatshirt-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.sweatshirt-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 15px;
+  border: solid 1px #000;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: rgb(228, 225, 225);
+}
+
+.sweatshirt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.sweatshirt-item img {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #000;
+}
+
+.sweatshirt-details {
+  display: flex;
+  gap: 20px;
+  padding-left: 40px;
+}
+
+.sweatshirt-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sweatshirt-group label {
+  margin-bottom: 10px;
+}
+
+.sweatshirt-item input {
+  width: 100px;
+}
+
+.button-click-link {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  background-color: #008b8b;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button-click-link:hover {
+  color: #008b8b;
+  border: 2px solid #008b8b;
+  background-color: white;
+}
+
+.form-file-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/******* Modifier sweatshirt *******/
+
+.title-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+.custom-file-label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #f6f3f2;
+  color: black;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.link-back {
+  margin-top: 30px;
+}
+
+.link-back a {
+  text-decoration: none;
+  color: #000;
+}
+
+.link-back a:hover {
+  color: #008b8b;
+  font-weight: bold;
+}

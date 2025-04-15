@@ -22,16 +22,22 @@
                     <div class="navbar-container">
                         <div class="navbar-logo">
                             <a href="{{ path('app_home') }}">
-                                <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+                                <img src="{{ asset('image/Logo.png') }}" alt="Logo">
                             </a>
                         </div>
                         <ul class="navbar-links">
-                            <li><a href="{{ path('app_home') }}">Accueil</a></li>
-                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li><a href="{{ path('app_admin') }}">Back-Office</a></li>
+                                <li><a href="{{ path('app_shop') }}">Boutique</a></li>
+                                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+                            {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <li><a href="{{ path('app_home') }}">Accueil</a></li>
                                 <li><a href="{{ path('app_shop') }}">Boutique</a></li>
                                 <li><a href="{{ path('app_cart') }}">Panier</a></li>
                                 <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
                             {% else %}
+                                <li><a href="{{ path('app_home') }}">Accueil</a></li>
                                 <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
                                 <li><a href="{{ path('app_login') }}">Se connecter</a></li>
                             {% endif %}
@@ -50,7 +56,7 @@
                 <div class="footer-container">
                     <div class="footer-logo">
                         <a href="{{ path('app_home') }}">
-                            <img src="{{ asset('images/Logo.png') }}" alt="Logo">
+                            <img src="{{ asset('image/Logo.png') }}" alt="Logo">
                         </a>
                     </div>
                     <div class="footer-links">
@@ -64,7 +70,7 @@
                     </div>
                     <div class="footer-contact">
                         <h2>Adresse :</h2>
-                        <address>
+                        <address class="footer-address">
                             Piccadilly Circus<br>
                             London W1J 0DA<br> 
                             Royaume-Uni

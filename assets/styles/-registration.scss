@@ -11,3 +11,17 @@
   padding: 8px; /* Ajoute un peu de padding pour que ce soit plus lisible */
   margin-bottom: 10px; /* Espace entre les champs */
 }
+
+.input-group-register {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-register input {
+  flex: 1;
+}
+
+.password-icon-register {
+  cursor: pointer;
+  margin-left: 8px;
+}
