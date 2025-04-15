@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Sweatshirt{% endblock %}
+
+{% block body %}
+<h1 class="title-edit">Modifier les informations du sweatshirt : <br>"{{ sweatshirt.name}}"</h1>
+
+{{ form_start(form) }}
+<div class="form-line" style="background-color: white">
+    <div class="image-wrapper-edit">
+        {% if sweatshirt.image %}
+            <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="100">
+        {% else %}
+            <p>Aucune image pour ce sweatshirt</p>
+        {% endif %}
+        <div class="form-file-wrapper">
+            {{ form_label(form.imageFile, 'Modifier photo') }}
+            <label class="custom-file-label" for="{{ form.imageFile.vars.id }}">Choisir un fichier</label>
+            {{ form_widget(form.imageFile, {'attr': {'class': 'custom-file-input'}}) }}
+            {{ form_errors(form.imageFile) }}
+        </div>
+    </div>
+   
+    <div class="form-container">
+        <div class="form-fields">
+            {{ form_row(form.name) }}
+            {{ form_row(form.price) }}
+            {{ form_row(form.stockXS) }}
+            {{ form_row(form.stockS) }}
+            {{ form_row(form.stockM) }}
+            {{ form_row(form.stockL) }}
+            {{ form_row(form.stockXL) }}
+        </div>
+        <div class="form-button">
+            <button class="button-click" type="submit">Enregistrer</button>
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}
+
+<div class="link-back">
+    <a href="{{ path('app_admin') }}">Retour à la liste</a>
+</div>
+
+{% endblock %}

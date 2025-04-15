@@ -1,20 +1,90 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Back-Office{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<h1>Back-Office</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{{ form_start(form) }}
+<div class="form-line">
+    <div class="image-wrapper">
+        {{ form_row(form.imageFile) }}
+    </div>
+    <div class="form-container">
+        <div class="form-fields">
+            {{ form_row(form.name) }}
+            {{ form_row(form.price)}}
+            {{ form_row(form.stockXS) }}
+            {{ form_row(form.stockS) }}
+            {{ form_row(form.stockM) }}
+            {{ form_row(form.stockL) }}
+            {{ form_row(form.stockXL) }}
+        </div>
+        <div class="form-button">
+            <button class="button-click" type="submit">Ajouter</button>
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/natha/ecommerce_stubborn/src/Controller/AdminController.php</code></li>
-        <li>Your template at <code>C:/Users/natha/ecommerce_stubborn/templates/admin/index.html.twig</code></li>
-    </ul>
+<div class="sweatshirt-list">
+    {% for sweatshirt in sweatshirts %}
+        <div class="sweatshirt-item">
+            
+            {% if sweatshirt.image %}
+                <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="100">
+            {% else %}
+                Pas d'image
+            {% endif %}
+
+            <div class="sweatshirt-container">
+                <div class="sweatshirt-details">
+                        <div class="sweatshirt-group">
+                            <label>Nom</label>
+                            <input type="text" value="{{ sweatshirt.name }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Prix</label>
+                            <input type="text" value="{{ sweatshirt.price|number_format(2, ',', ' ')  }} €" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Stock XS</label>
+                            <input type="text" value="{{ sweatshirt.stockXS }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Stock S</label>
+                            <input type="text" value="{{ sweatshirt.stockS }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Stock M</label>
+                            <input type="text" value="{{ sweatshirt.stockM }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Stock L</label>
+                            <input type="text" value="{{ sweatshirt.stockL }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>Stock XL</label>
+                            <input type="text" value="{{ sweatshirt.stockXL }}" readonly>
+                        </div>           
+                </div> 
+            
+                <div class="action-links">
+                    <a href="{{ path('app_admin_edit', { id: sweatshirt.id }) }}" class="button-click-link">Modifier</a>
+                    <a href="{{ path('app_admin_delete', { id: sweatshirt.id }) }}" class="button-click-link" onClick="return confirm('Supprimer ce sweatshirt ?')">Supprimer</a>
+                </div>
+            </div>
+        </div>
+        
+       
+    {% else %}
+        <p>Aucun sweatshirt en stock.</p>
+    {% endfor %}
 </div>
 {% endblock %}
