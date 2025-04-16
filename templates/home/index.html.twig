@@ -17,11 +17,11 @@
             <div class="sweatshirt-container-home">
                 <div class="sweatshirt-details-home">
                     <h2>{{ sweatshirt.name }}</h2>
-                    <p>{{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
+                    <p>Prix : {{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
                 </div>
                 <div class="sweatshirt-button-home">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <a href="{{ path('app_product') }}" class="button-click-home">Voir</a>
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <a href="{{ path('app_product', { 'id': sweatshirt.id}) }}" class="button-click-home">Voir</a>
                 {% endif %}
                 </div>
             </div>

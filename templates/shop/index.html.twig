@@ -31,7 +31,7 @@
                     <p>{{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
                 </div>
                 <div class="sweatshirt-button-shop">
-                    <a href="{{ path('app_product') }}" class="button-click-shop">Voir</a>
+                    <a href="{{ path('app_product', { id: sweatshirt.id}) }}" class="button-click-shop">Voir</a>
                 </div>
             </div>
             

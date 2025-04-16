@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ sweatshirt.name }}{% endblock %}
+
+{% block body %}
+
+<div class="product-container">
+    <div class="product-image">
+        {% if sweatshirt.image %}
+            <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="300">
+        {% else %}
+            <p>Aucune image disponible</p>
+        {% endif %}
+    </div>
+
+    <div class="product-description">
+        <p class="product-name">{{ sweatshirt.name }}</p>
+        <p>Prix : {{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
+
+        <form>
+            <label for="size">Choisissez votre taille :</label>
+            <select name="size" id="size">
+                {% if sweatshirt.stockXS > 0 %}
+                    <option value="XS">XS</option>
+                {% endif %}
+                {% if sweatshirt.stockS > 0 %}
+                    <option value="S">S</option>
+                {% endif %}
+                {% if sweatshirt.stockM > 0 %}
+                    <option value="M">M</option>
+                {% endif %}
+                {% if sweatshirt.stockL > 0 %}
+                    <option value="L">L</option>
+                {% endif %}
+                {% if sweatshirt.stockXL > 0 %}
+                    <option value="XL">XL</option>
+                {% endif %}
+            </select>
+        </form>
+
+        <a href="{{ path('app_cart', { id: sweatshirt.id }) }}" class="button-click-product">Ajouter au panier</a>
+
+        <a href="{{ path('app_shop') }}" class="product-link">Retour à la boutique</a>
+    </div>
+
+</div>
+{% endblock %}
