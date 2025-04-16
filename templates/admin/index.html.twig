@@ -19,6 +19,7 @@
             {{ form_row(form.stockM) }}
             {{ form_row(form.stockL) }}
             {{ form_row(form.stockXL) }}
+            {{ form_row(form.featured) }}
         </div>
         <div class="form-button">
             <button class="button-click" type="submit">Ajouter</button>
@@ -72,6 +73,11 @@
                         <div class="sweatshirt-group">
                             <label>Stock XL</label>
                             <input type="text" value="{{ sweatshirt.stockXL }}" readonly>
+                        </div>
+
+                        <div class="sweatshirt-group">
+                            <label>En vedette</label>
+                            <input type="checkbox" {% if sweatshirt.featured %}checked{% endif %} disabled>
                         </div>           
                 </div> 
             

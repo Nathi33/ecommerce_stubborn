@@ -37,6 +37,9 @@ class Sweatshirt
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
 
+    #[ORM\Column(type: 'boolean')]
+    private ?bool $featured = false;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -134,6 +137,18 @@ class Sweatshirt
     public function setImage(?string $image): static
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function isFeatured(): ?bool
+    {
+        return $this->featured;
+    }
+    
+    public function setFeatured(bool $featured): static
+    {
+        $this->featured = $featured;
 
         return $this;
     }

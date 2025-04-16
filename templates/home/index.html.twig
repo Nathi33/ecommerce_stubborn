@@ -3,18 +3,32 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Accueil</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/natha/ecommerce_stubborn/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/natha/ecommerce_stubborn/templates/home/index.html.twig</code></li>
-    </ul>
+<h1 class="title-home"> Nos Sweat-shirts vedette</h1>
+<div class="featured-sweatshirts-home">
+    {% for sweatshirt in featured_sweatshirts %}
+        <div class="sweatshirt-item-home">
+            <div class="sweatshirt-image-home">
+                    {% if sweatshirt.image %}
+                        <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="100">
+                    {% else %}
+                        Pas d'image
+                    {% endif %}
+            </div>
+            <div class="sweatshirt-container-home">
+                <div class="sweatshirt-details-home">
+                    <h2>{{ sweatshirt.name }}</h2>
+                    <p>{{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
+                </div>
+                <div class="sweatshirt-button-home">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a href="{{ path('app_product') }}" class="button-click-home">Voir</a>
+                {% endif %}
+                </div>
+            </div>
+            
+        </div>
+    {% else %}
+        <p>Aucun sweatshirt en vedette trouvé.</p>
+    {% endfor %}  
 </div>
 {% endblock %}

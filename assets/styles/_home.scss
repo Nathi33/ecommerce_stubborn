@@ -1,0 +1,76 @@
+.title-home {
+  text-align: center;
+}
+
+.featured-sweatshirts-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sweatshirt-item-home {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-right: 50px;
+  width: 250px;
+  border: solid 1px #000;
+  border-radius: 8px;
+  background-color: rgb(228, 225, 225);
+}
+
+.sweatshirt-image-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sweatshirt-item-home img {
+  width: 130px;
+  height: auto;
+  border: 2px solid #000;
+}
+
+.sweatshirt-container-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.sweatshirt-details-home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sweatshirt-button-home {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.button-click-home {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  background-color: #008b8b;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button-click-home:hover {
+  color: #008b8b;
+  border: 2px solid #008b8b;
+  background-color: white;
+}

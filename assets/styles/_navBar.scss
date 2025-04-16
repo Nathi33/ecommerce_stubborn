@@ -9,7 +9,7 @@
   z-index: 1000;
 }
 
-/* Contenuer de la navbar */
+/* Conteneur de la navbar */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -20,20 +20,26 @@
   box-sizing: border-box;
 }
 
-/* Logo de la navbar */
 .navbar-logo img {
   height: 60px;
   width: auto;
 }
 
-/* Liens de la navbar */
+.slogan {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+  padding-left: 10px;
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-/* Style des liens de la navbar */
 .navbar-links a {
   color: #fff;
   text-decoration: none;
@@ -41,7 +47,6 @@
   transition: color 0.3s ease;
 }
 
-/** Style des liens de la navbar au survol */
 .navbar-links a:hover {
   color: #0f53f1;
   text-decoration: underline;
