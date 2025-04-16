@@ -3,20 +3,41 @@
 {% block title %}Boutique{% endblock %}
 
 {% block body %}
-<h1>Bienvenue dans notre boutique !</h1>
+<h1 class="title-shop">Bienvenue dans notre boutique !</h1>
 
-<ul>
+<form method="get" action="{{ path('app_shop') }}" class="filter-form">
+    <label for="priceRange">Filtrer par prix :</label>
+    <select name="priceRange" id="priceRange" onchange="this.form.submit()">
+        <option value="">Tous les prix</option>
+        <option value="10-29" {% if app.request.get('priceRange') == '10-29' %}selected{% endif %}>10€ à 29€</option>
+        <option value="29-35" {% if app.request.get('priceRange') == '29-35' %}selected{% endif %}>29€ à 35€</option>
+        <option value="35-60" {% if app.request.get('priceRange') == '35-60' %}selected{% endif %}>35€ à 60€</option>
+    </select>
+</form>
+
+<div class="sweatshirts-shop">
     {% for sweatshirt in sweatshirts %}
-        <li>{{ sweatshirt.name }} - {{ sweatshirt.price }} €
-
-            {% if sweatshirt.image %}
-                <br>
-                <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="120">
-            {% else %}
-                <br>
-                Pas d'image
-            {% endif %}
-        </li>
-    {% endfor %}
-</ul>
+        <div class="sweatshirt-item-shop">
+            <div class="sweatshirt-image-shop">
+                    {% if sweatshirt.image %}
+                        <img src="{{ asset('uploads/' ~ sweatshirt.image) }}" alt="{{ sweatshirt.name }}" width="100">
+                    {% else %}
+                        Pas d'image
+                    {% endif %}
+            </div>
+            <div class="sweatshirt-container-shop">
+                <div class="sweatshirt-details-shop">
+                    <h2>{{ sweatshirt.name }}</h2>
+                    <p>{{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
+                </div>
+                <div class="sweatshirt-button-shop">
+                    <a href="{{ path('app_product') }}" class="button-click-shop">Voir</a>
+                </div>
+            </div>
+            
+        </div>
+    {% else %}
+        <p>Aucun sweatshirt en stock.</p>
+    {% endfor %}  
+</div>
 {% endblock %}

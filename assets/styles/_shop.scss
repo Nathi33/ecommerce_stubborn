@@ -1,0 +1,93 @@
+.title-shop {
+  text-align: center;
+}
+
+.sweatshirts-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.sweatshirt-item-shop {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-right: 50px;
+  width: 250px;
+  border: solid 1px #000;
+  border-radius: 8px;
+  background-color: rgb(228, 225, 225);
+}
+
+.sweatshirt-image-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sweatshirt-item-shop img {
+  width: 130px;
+  height: auto;
+  border: 2px solid #000;
+}
+
+.sweatshirt-container-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.sweatshirt-details-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sweatshirt-button-shop {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.button-click-shop {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  background-color: #008b8b;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button-click-shop:hover {
+  color: #008b8b;
+  border: 2px solid #008b8b;
+  background-color: white;
+}
+
+.filter-form {
+  margin: 50px 0;
+}
+
+.filter-form label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.filter-form select {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
