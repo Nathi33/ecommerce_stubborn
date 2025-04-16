@@ -9,7 +9,9 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
 
 
 class SweatshirtType extends AbstractType
@@ -41,6 +43,10 @@ class SweatshirtType extends AbstractType
             ->add('imageFile', FileType::class, [
                 'label' => 'Image du sweatshirt',
                 'mapped' => false,
+                'required' => false,
+            ])
+            ->add('featured', CheckboxType::class, [
+                'label' => 'Mettre en avant',
                 'required' => false,
             ]);
     }

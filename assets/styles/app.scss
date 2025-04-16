@@ -2,8 +2,9 @@
 @use "./navBar";
 @use "./footer";
 @use "./sections";
-@use "./-button";
+@use "./button";
 @use "./loginPage";
-@use "./-registration.scss";
+@use "./registration";
 @use "./resetPassword";
 @use "./admin";
+@use "./home";
