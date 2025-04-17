@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Se Connecter!{% endblock %}
+{% block title %}Se Connecter{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -15,60 +15,55 @@
     </div>
 {% endfor %}
 
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connectés en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Se déconnecter</a>
+        <h1>Se connecter</h1>
+
+        <hr class="separator">
+
+        <div class="labelUsername">
+            <label for="inputUsername">Nom utilisateur :</label>
         </div>
-    {% endif %}
+        <div>
+            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
+        </div><br>
 
-    <h1>Se connecter</h1>
-
-    <hr class="separator">
-
-    <div class="labelUsername">
-        <label for="inputUsername">Nom utilisateur :</label>
-    </div>
-    <div>
-        <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
-    </div><br>
-
-    <div class="password-container">
-        <div class="labelPassword">
-            <label for="inputPassword">Mot de passe :</label>
-        </div>
-        <div class="input-group">
-            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-            <div class="password-icon">
-                <span class="material-symbols-outlined eye-off">visibility_off</span>
-                <span class="material-symbols-outlined eye-on">visibility</span>
+        <div class="password-container">
+            <div class="labelPassword">
+                <label for="inputPassword">Mot de passe :</label>
             </div>
-        </div>
-    </div><br>
+            <div class="input-group">
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                <div class="password-icon">
+                    <span class="material-symbols-outlined eye-off">visibility_off</span>
+                    <span class="material-symbols-outlined eye-on">visibility</span>
+                </div>
+            </div>
+        </div><br>
 
-    <input type="hidden" name="_csrf_token"
-        value="{{ csrf_token('authenticate') }}"
-    >
+        <input type="hidden" name="_csrf_token"
+            value="{{ csrf_token('authenticate') }}"
+        >
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Se connecter
-    </button>
-
-    <div class="mb-3 text">
-        <a href="{{ path('app_forgot_password_request') }}" class="btn btn-link">Mot de passe oublié</a>
-
-    <hr class="separator">
-
-    <div data-controller="hello" class="mb-3 text">
-        <p>Pas encore inscrit ?</p>
-        <button data-action="click->hello#handleClick" data-url="{{ path('app_register') }}">
-            Créer un compte
+        <button class="btn" type="submit">
+            Se connecter
         </button>
-    </div>
-</form>
+
+        <div class="link">
+            <a href="{{ path('app_forgot_password_request') }}" class="login-link">Mot de passe oublié</a>
+        </div>
+
+        <hr class="separator">
+
+        <div data-controller="hello">
+            <p>Pas encore inscrit ?</p>
+            <button data-action="click->hello#handleClick" data-url="{{ path('app_register') }}">
+                Créer un compte
+            </button>
+        </div>
+    </form>
 </section>
 {% endblock %}
