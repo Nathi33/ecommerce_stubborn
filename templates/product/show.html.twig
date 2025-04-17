@@ -17,8 +17,8 @@
         <p class="product-name">{{ sweatshirt.name }}</p>
         <p>Prix : {{ sweatshirt.price|number_format(2, ',', ' ') }} €</p>
 
-        <form>
-            <label for="size">Choisissez votre taille :</label>
+        <form method="post" action="{{ path('app_cart_add', { id: sweatshirt.id }) }}" class="product-form">
+            <label for="size" class="product-label">Choisissez votre taille :</label>
             <select name="size" id="size">
                 {% if sweatshirt.stockXS > 0 %}
                     <option value="XS">XS</option>
@@ -36,9 +36,10 @@
                     <option value="XL">XL</option>
                 {% endif %}
             </select>
+            <button type="submit" class="button-click-product">Ajouter au panier</button>
         </form>
 
-        <a href="{{ path('app_cart', { id: sweatshirt.id }) }}" class="button-click-product">Ajouter au panier</a>
+        
 
         <a href="{{ path('app_shop') }}" class="product-link">Retour à la boutique</a>
     </div>

@@ -1,20 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
+{% block title %}Mon panier{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<h1 class="cart-title">Mon panier</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% if cart is not empty %}
+    {% for item in cart %}
+        <div class="cart-container">
+            {% if item.image %}
+                    <img src="{{ asset('uploads/' ~ item.image) }}" alt="{{ item.name }}" width="100">
+                {% else %}
+                    <p>Aucune image disponible</p>
+                {% endif %}
+            
+            <div class="cart-item">
+                <div class="item-details">
+                    <p class="cart-name">{{ item.name }}</p>
+                    <p>Prix : {{ item.price|number_format(2, ',', ' ') }} €</p>
+                    <p>Taille : {{ item.size }}</p>
+                </div>
+                <form method="post" action="{{ path('app_cart_remove', { index: loop.index0 }) }}" class="cart-button">
+                    <input type="hidden" name="_token" value="{{ csrf_token('remove-item-' ~ loop.index0) }}">
+                    <button type="submit" class="button-click-cart">Retirer du panier</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/natha/ecommerce_stubborn/src/Controller/CartController.php</code></li>
-        <li>Your template at <code>C:/Users/natha/ecommerce_stubborn/templates/cart/index.html.twig</code></li>
-    </ul>
-</div>
+    <div class="cart-buy">
+        <div class="total">
+            <p class="cart-total">TOTAL : {{ total|number_format(2, ',', ' ') }} €</p>
+        </div>
+        <div class="cart-links">
+            <a href="{{ path('app_login') }}" class="cart-link-finalize">Finaliser ma commande</a>
+            <a href="{{ path('app_shop') }}" class="cart-link-continue">Continuer mes achats</a>
+        </div>
+    </div>
+{% else %}
+    <p>Votre panier est vide.</p>
+{% endif %}
+
 {% endblock %}
