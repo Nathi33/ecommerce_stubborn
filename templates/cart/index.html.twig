@@ -33,7 +33,7 @@
             <p class="cart-total">TOTAL : {{ total|number_format(2, ',', ' ') }} €</p>
         </div>
         <div class="cart-links">
-            <a href="{{ path('app_login') }}" class="cart-link-finalize">Finaliser ma commande</a>
+            <a href="{{ path('app_create_checkout_session') }}" class="cart-link-finalize">Finaliser ma commande</a>
             <a href="{{ path('app_shop') }}" class="cart-link-continue">Continuer mes achats</a>
         </div>
     </div>
