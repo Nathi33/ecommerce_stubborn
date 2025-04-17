@@ -2,6 +2,11 @@
 
 {% block title %}S'inscrire{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
 {% block body %}
 <section class="register-form">
     {% for flash_error in app.flashes('verify_email_error') %}
@@ -30,13 +35,37 @@
         }) }}
         <br><br>
         
-        {{ form_row(registrationForm.plainPassword, {
+        {# {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe :'
         }) }}
 
         {{ form_row(registrationForm.plainPasswordConfirm, {
             label: 'Confirmer le mot de passe :'
-        }) }}
+        }) }} #}
+
+        <div class="password-container">
+            <label for="{{ registrationForm.plainPassword.vars.id }}">Mot de passe :</label>
+            <div class="input-group">
+                {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                <div class="password-icon">
+                    <span class="material-symbols-outlined eye-off">visibility_off</span>
+                    <span class="material-symbols-outlined eye-on">visibility</span>
+                </div>
+            </div>
+            {{ form_errors(registrationForm.plainPassword) }}
+        </div><br>
+
+        <div class="password-container">
+            <label for="{{ registrationForm.plainPasswordConfirm.vars.id }}">Confirmer le mot de passe :</label>
+            <div class="input-group">
+                {{ form_widget(registrationForm.plainPasswordConfirm, {'attr': {'class': 'form-control'}}) }}
+                <div class="password-icon">
+                    <span class="material-symbols-outlined eye-off">visibility_off</span>
+                    <span class="material-symbols-outlined eye-on">visibility</span>
+                </div>
+            </div>
+            {{ form_errors(registrationForm.plainPasswordConfirm) }}
+        </div>
 
         <button type="submit" class="btn">Créer un compte</button>
     {{ form_end(registrationForm) }}

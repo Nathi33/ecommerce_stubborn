@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ShopController extends AbstractController
 {
-    #[Route('/shop', name: 'app_shop')]
+    #[Route('/products', name: 'app_shop')]
     public function index(SweatshirtRepository $sweatshirtRepository, Request $request): Response
     {
         //$sweatshirts = $sweatshirtRepository->findAll();
