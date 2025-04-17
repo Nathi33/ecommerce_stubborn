@@ -26,23 +26,65 @@
                             </a>
                             <p class="slogan">Don't compromise on your look</p>
                         </div>
-                        <ul class="navbar-links">
-                            
-                            {% if is_granted('ROLE_ADMIN') %}
-                                <li><a href="{{ path('app_admin') }}">Back-Office</a></li>
-                                <li><a href="{{ path('app_shop') }}">Boutique</a></li>
-                                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
-                            {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                                <li><a href="{{ path('app_home') }}">Accueil</a></li>
-                                <li><a href="{{ path('app_shop') }}">Boutique</a></li>
-                                <li><a href="{{ path('app_cart') }}">Panier</a></li>
-                                <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
-                            {% else %}
-                                <li><a href="{{ path('app_home') }}">Accueil</a></li>
-                                <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
-                                <li><a href="{{ path('app_login') }}">Se connecter</a></li>
-                            {% endif %}
-                        </ul>
+                        {% set current_route = app.request.attributes.get('_route') %}
+                            <ul class="navbar-links">
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <li>
+                                        <a href="{{ path('app_admin') }}"
+                                        class="{% if current_route == 'app_admin' %}active{% endif %}">
+                                        Back-Office
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_shop') }}"
+                                        class="{% if current_route == 'app_shop' %}active{% endif %}">
+                                        Boutique
+                                        </a>
+                                    </li>
+                                    <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+
+                                {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                    <li>
+                                        <a href="{{ path('app_home') }}"
+                                        class="{% if current_route == 'app_home' %}active{% endif %}">
+                                        Accueil
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_shop') }}"
+                                        class="{% if current_route == 'app_shop' %}active{% endif %}">
+                                        Boutique
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_cart') }}"
+                                        class="{% if current_route == 'app_cart' %}active{% endif %}">
+                                        Panier
+                                        </a>
+                                    </li>
+                                    <li><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+
+                                {% else %}
+                                    <li>
+                                        <a href="{{ path('app_home') }}"
+                                        class="{% if current_route == 'app_home' %}active{% endif %}">
+                                        Accueil
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_register') }}"
+                                        class="{% if current_route == 'app_register' %}active{% endif %}">
+                                        S'inscrire
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_login') }}"
+                                        class="{% if current_route == 'app_login' %}active{% endif %}">
+                                        Se connecter
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
                     </div>
                 </nav>
             </header>

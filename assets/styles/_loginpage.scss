@@ -9,21 +9,26 @@
 
 .password-container {
   position: relative;
+  margin-bottom: 15px;
 }
 
 .input-group {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.password-container input {
+  width: 90%;
+  padding: 8px;
 }
 
 .password-icon {
   position: absolute;
   display: flex;
-  align-items: center;
-  top: 50%;
-  height: 50%;
-  right: 85px;
+  right: 20px;
   cursor: pointer;
+  gap: 5px;
 }
 
 .password-icon:hover {
@@ -32,10 +37,11 @@
 }
 
 .eye-off {
-  display: none;
+  display: block;
   color: grey;
 }
 
 .eye-on {
   color: grey;
+  display: none;
 }
