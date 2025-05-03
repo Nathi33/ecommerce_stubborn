@@ -1,0 +1,28 @@
+var class_app_1_1_entity_1_1_user =
+[
+    [ "eraseCredentials", "class_app_1_1_entity_1_1_user.html#a13b5cae0d472efef6b5d500b9bad83d0", null ],
+    [ "getActivationToken", "class_app_1_1_entity_1_1_user.html#ac4785e8473b4c2b5e97f5255d7286fdc", null ],
+    [ "getDeliveryAddress", "class_app_1_1_entity_1_1_user.html#a44f7787d5be68a54cd039f47f7954740", null ],
+    [ "getEmail", "class_app_1_1_entity_1_1_user.html#ab0e59886ef56c12ead7a12200fbd64cf", null ],
+    [ "getId", "class_app_1_1_entity_1_1_user.html#a18e270b90af3767bdace931a6333fbd6", null ],
+    [ "getPassword", "class_app_1_1_entity_1_1_user.html#a0eb2c83653e08720fa935a63acd064ef", null ],
+    [ "getRoles", "class_app_1_1_entity_1_1_user.html#a06b436f76cc04aaf6dd93593208ee05e", null ],
+    [ "getUserIdentifier", "class_app_1_1_entity_1_1_user.html#a18bf45d89887f63899184244423adba8", null ],
+    [ "getUsername", "class_app_1_1_entity_1_1_user.html#a4e3c86648d1bec64a12624b075a76bb8", null ],
+    [ "isVerified", "class_app_1_1_entity_1_1_user.html#a359efc031b0c9f18af07f99e64e681ad", null ],
+    [ "setActivationToken", "class_app_1_1_entity_1_1_user.html#ab3b4ba8befa1c6d196d766a69c014a88", null ],
+    [ "setDeliveryAddress", "class_app_1_1_entity_1_1_user.html#a87bac8bf47e673c165e80168f1e14163", null ],
+    [ "setEmail", "class_app_1_1_entity_1_1_user.html#aef58f4167ebb4b4508f53de0adc21f1e", null ],
+    [ "setIsVerified", "class_app_1_1_entity_1_1_user.html#a2b224d4b2c9497cbb3d139a859f9dfde", null ],
+    [ "setPassword", "class_app_1_1_entity_1_1_user.html#a3a55d1244150519ceda46bbc1b8aa943", null ],
+    [ "setRoles", "class_app_1_1_entity_1_1_user.html#afa8ebe79f917393bfc771d5e15ed072e", null ],
+    [ "setUsername", "class_app_1_1_entity_1_1_user.html#a3e58300f0cd72afaf0a5a30bae8caa33", null ],
+    [ "$activationToken", "class_app_1_1_entity_1_1_user.html#a3db8b19d3f2bb540171c575fca30d028", null ],
+    [ "$deliveryAddress", "class_app_1_1_entity_1_1_user.html#ae694612cd7952d630663a097917c40f7", null ],
+    [ "$email", "class_app_1_1_entity_1_1_user.html#a942c9f813f5523e7a3b8b674c2f6e2f1", null ],
+    [ "$id", "class_app_1_1_entity_1_1_user.html#ae388509d95830178659d8b7a5ea5e9fc", null ],
+    [ "$isVerified", "class_app_1_1_entity_1_1_user.html#a77e61109919d878b389082a0056287f2", null ],
+    [ "$password", "class_app_1_1_entity_1_1_user.html#a8643f538363ee633269eb4f4b23f99a1", null ],
+    [ "$roles", "class_app_1_1_entity_1_1_user.html#a07c6c9fbff99403c294a04a0b62e9a9f", null ],
+    [ "$username", "class_app_1_1_entity_1_1_user.html#a6ce17de5b19f5dfa2b81c082c8035f85", null ]
+];

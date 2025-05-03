@@ -1,0 +1,230 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Index des espaces de nommage}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Liste des espaces de nommage}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Index hiérarchique}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Hiérarchie des classes}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index des classes}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Liste des classes}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Index des fichiers}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Liste des fichiers}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Documentation des espaces de nommage}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Référence de l\textquotesingle {}espace de nommage App}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Controller}{9}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Entity}{10}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Form}{10}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Repository}{11}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Security}{11}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Référence de l\textquotesingle {}espace de nommage App\textbackslash {}Service}{11}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Documentation des classes}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Référence de la classe App\textbackslash {}Controller\textbackslash {}Admin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{13}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Description détaillée}{13}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Documentation des fonctions membres}{14}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}delete()}{14}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}edit()}{14}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}index()}{14}{subsubsection.6.1.2.3}%
+\contentsline {section}{\numberline {6.2}Référence de la classe App\textbackslash {}Security\textbackslash {}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticator}{15}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Description détaillée}{16}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Documentation des constructeurs et destructeur}{16}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}\_\_construct()}{16}{subsubsection.6.2.2.1}%
+\contentsline {subsection}{\numberline {6.2.3}Documentation des fonctions membres}{16}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}authenticate()}{16}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}getLoginUrl()}{16}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}onAuthenticationSuccess()}{17}{subsubsection.6.2.3.3}%
+\contentsline {subsection}{\numberline {6.2.4}Documentation des données membres}{17}{subsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.4.1}LOGIN\_ROUTE}{17}{subsubsection.6.2.4.1}%
+\contentsline {section}{\numberline {6.3}Référence de la classe App\textbackslash {}Controller\textbackslash {}Cart\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{17}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Description détaillée}{18}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Documentation des fonctions membres}{18}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}addToCart()}{18}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}cart()}{18}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}removeFromCart()}{18}{subsubsection.6.3.2.3}%
+\contentsline {section}{\numberline {6.4}Référence de la classe App\textbackslash {}Form\textbackslash {}Change\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type}{19}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Description détaillée}{19}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Documentation des fonctions membres}{19}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}buildForm()}{19}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}configureOptions()}{20}{subsubsection.6.4.2.2}%
+\contentsline {section}{\numberline {6.5}Référence de la classe App\textbackslash {}Security\textbackslash {}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verifier}{20}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Référence de la classe App\textbackslash {}Controller\textbackslash {}Home\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{20}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Description détaillée}{20}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Documentation des fonctions membres}{21}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}index()}{21}{subsubsection.6.6.2.1}%
+\contentsline {section}{\numberline {6.7}Référence de la classe App\textbackslash {}Kernel}{21}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Référence de la classe App\textbackslash {}Controller\textbackslash {}Login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{21}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Documentation des fonctions membres}{22}{subsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.1.1}login()}{22}{subsubsection.6.8.1.1}%
+\contentsline {section}{\numberline {6.9}Référence de la classe App\textbackslash {}Controller\textbackslash {}Payment\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{22}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Description détaillée}{23}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Documentation des constructeurs et destructeur}{23}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}\_\_construct()}{23}{subsubsection.6.9.2.1}%
+\contentsline {subsection}{\numberline {6.9.3}Documentation des fonctions membres}{23}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}cancel()}{23}{subsubsection.6.9.3.1}%
+\contentsline {subsubsection}{\numberline {6.9.3.2}checkout()}{23}{subsubsection.6.9.3.2}%
+\contentsline {subsubsection}{\numberline {6.9.3.3}success()}{24}{subsubsection.6.9.3.3}%
+\contentsline {subsection}{\numberline {6.9.4}Documentation des données membres}{24}{subsection.6.9.4}%
+\contentsline {subsubsection}{\numberline {6.9.4.1}\$session}{24}{subsubsection.6.9.4.1}%
+\contentsline {section}{\numberline {6.10}Référence de la classe App\textbackslash {}Controller\textbackslash {}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{24}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Description détaillée}{24}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Documentation des fonctions membres}{24}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}show()}{24}{subsubsection.6.10.2.1}%
+\contentsline {section}{\numberline {6.11}Référence de la classe App\textbackslash {}Controller\textbackslash {}Registration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{25}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Description détaillée}{25}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Documentation des constructeurs et destructeur}{26}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}\_\_construct()}{26}{subsubsection.6.11.2.1}%
+\contentsline {subsection}{\numberline {6.11.3}Documentation des fonctions membres}{26}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}register()}{26}{subsubsection.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.3.2}verifyUserEmail()}{26}{subsubsection.6.11.3.2}%
+\contentsline {subsection}{\numberline {6.11.4}Documentation des données membres}{27}{subsection.6.11.4}%
+\contentsline {subsubsection}{\numberline {6.11.4.1}\$authenticator}{27}{subsubsection.6.11.4.1}%
+\contentsline {subsubsection}{\numberline {6.11.4.2}\$userAuthenticator}{27}{subsubsection.6.11.4.2}%
+\contentsline {section}{\numberline {6.12}Référence de la classe App\textbackslash {}Form\textbackslash {}Registration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type}{27}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Description détaillée}{28}{subsection.6.12.1}%
+\contentsline {subsection}{\numberline {6.12.2}Documentation des fonctions membres}{28}{subsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.1}buildForm()}{28}{subsubsection.6.12.2.1}%
+\contentsline {subsubsection}{\numberline {6.12.2.2}configureOptions()}{28}{subsubsection.6.12.2.2}%
+\contentsline {section}{\numberline {6.13}Référence de la classe App\textbackslash {}Controller\textbackslash {}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{28}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Description détaillée}{29}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Documentation des constructeurs et destructeur}{29}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}\_\_construct()}{29}{subsubsection.6.13.2.1}%
+\contentsline {subsection}{\numberline {6.13.3}Documentation des fonctions membres}{29}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}checkEmail()}{29}{subsubsection.6.13.3.1}%
+\contentsline {subsubsection}{\numberline {6.13.3.2}processSendingPasswordResetEmail()}{30}{subsubsection.6.13.3.2}%
+\contentsline {section}{\numberline {6.14}Référence de la classe App\textbackslash {}Entity\textbackslash {}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request}{30}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Description détaillée}{31}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Documentation des constructeurs et destructeur}{31}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}\_\_construct()}{31}{subsubsection.6.14.2.1}%
+\contentsline {subsection}{\numberline {6.14.3}Documentation des fonctions membres}{31}{subsection.6.14.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.1}getId()}{31}{subsubsection.6.14.3.1}%
+\contentsline {subsubsection}{\numberline {6.14.3.2}getUser()}{32}{subsubsection.6.14.3.2}%
+\contentsline {subsection}{\numberline {6.14.4}Documentation des données membres}{32}{subsection.6.14.4}%
+\contentsline {subsubsection}{\numberline {6.14.4.1}\$id}{32}{subsubsection.6.14.4.1}%
+\contentsline {subsubsection}{\numberline {6.14.4.2}\$user}{32}{subsubsection.6.14.4.2}%
+\contentsline {section}{\numberline {6.15}Référence de la classe App\textbackslash {}Form\textbackslash {}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type}{32}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Description détaillée}{33}{subsection.6.15.1}%
+\contentsline {subsection}{\numberline {6.15.2}Documentation des fonctions membres}{33}{subsection.6.15.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.1}buildForm()}{33}{subsubsection.6.15.2.1}%
+\contentsline {subsubsection}{\numberline {6.15.2.2}configureOptions()}{33}{subsubsection.6.15.2.2}%
+\contentsline {section}{\numberline {6.16}Référence de la classe App\textbackslash {}Repository\textbackslash {}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository}{33}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Description détaillée}{34}{subsection.6.16.1}%
+\contentsline {subsection}{\numberline {6.16.2}Documentation des constructeurs et destructeur}{34}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}\_\_construct()}{34}{subsubsection.6.16.2.1}%
+\contentsline {subsection}{\numberline {6.16.3}Documentation des fonctions membres}{34}{subsection.6.16.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.1}createResetPasswordRequest()}{34}{subsubsection.6.16.3.1}%
+\contentsline {section}{\numberline {6.17}Référence de la classe App\textbackslash {}Controller\textbackslash {}Security\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{35}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Description détaillée}{35}{subsection.6.17.1}%
+\contentsline {subsection}{\numberline {6.17.2}Documentation des fonctions membres}{35}{subsection.6.17.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.1}login()}{35}{subsubsection.6.17.2.1}%
+\contentsline {subsubsection}{\numberline {6.17.2.2}logout()}{35}{subsubsection.6.17.2.2}%
+\contentsline {section}{\numberline {6.18}Référence de la classe App\textbackslash {}Controller\textbackslash {}Shop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{36}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Description détaillée}{36}{subsection.6.18.1}%
+\contentsline {subsection}{\numberline {6.18.2}Documentation des fonctions membres}{36}{subsection.6.18.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.1}index()}{36}{subsubsection.6.18.2.1}%
+\contentsline {section}{\numberline {6.19}Référence de la classe App\textbackslash {}Service\textbackslash {}Stripe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service}{37}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Description détaillée}{37}{subsection.6.19.1}%
+\contentsline {subsection}{\numberline {6.19.2}Documentation des constructeurs et destructeur}{37}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}\_\_construct()}{37}{subsubsection.6.19.2.1}%
+\contentsline {subsection}{\numberline {6.19.3}Documentation des fonctions membres}{37}{subsection.6.19.3}%
+\contentsline {subsubsection}{\numberline {6.19.3.1}createCheckoutSession()}{37}{subsubsection.6.19.3.1}%
+\contentsline {section}{\numberline {6.20}Référence de la classe App\textbackslash {}Entity\textbackslash {}Sweatshirt}{38}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Description détaillée}{40}{subsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.20.2}Documentation des fonctions membres}{40}{subsection.6.20.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.1}getId()}{40}{subsubsection.6.20.2.1}%
+\contentsline {subsubsection}{\numberline {6.20.2.2}getImage()}{40}{subsubsection.6.20.2.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.3}getName()}{40}{subsubsection.6.20.2.3}%
+\contentsline {subsubsection}{\numberline {6.20.2.4}getPrice()}{40}{subsubsection.6.20.2.4}%
+\contentsline {subsubsection}{\numberline {6.20.2.5}getStockL()}{40}{subsubsection.6.20.2.5}%
+\contentsline {subsubsection}{\numberline {6.20.2.6}getStockM()}{40}{subsubsection.6.20.2.6}%
+\contentsline {subsubsection}{\numberline {6.20.2.7}getStockS()}{41}{subsubsection.6.20.2.7}%
+\contentsline {subsubsection}{\numberline {6.20.2.8}getStockXL()}{41}{subsubsection.6.20.2.8}%
+\contentsline {subsubsection}{\numberline {6.20.2.9}getStockXS()}{41}{subsubsection.6.20.2.9}%
+\contentsline {subsubsection}{\numberline {6.20.2.10}isFeatured()}{41}{subsubsection.6.20.2.10}%
+\contentsline {subsubsection}{\numberline {6.20.2.11}setFeatured()}{41}{subsubsection.6.20.2.11}%
+\contentsline {subsubsection}{\numberline {6.20.2.12}setImage()}{41}{subsubsection.6.20.2.12}%
+\contentsline {subsubsection}{\numberline {6.20.2.13}setName()}{41}{subsubsection.6.20.2.13}%
+\contentsline {subsubsection}{\numberline {6.20.2.14}setPrice()}{42}{subsubsection.6.20.2.14}%
+\contentsline {subsubsection}{\numberline {6.20.2.15}setStockL()}{42}{subsubsection.6.20.2.15}%
+\contentsline {subsubsection}{\numberline {6.20.2.16}setStockM()}{42}{subsubsection.6.20.2.16}%
+\contentsline {subsubsection}{\numberline {6.20.2.17}setStockS()}{42}{subsubsection.6.20.2.17}%
+\contentsline {subsubsection}{\numberline {6.20.2.18}setStockXL()}{42}{subsubsection.6.20.2.18}%
+\contentsline {subsubsection}{\numberline {6.20.2.19}setStockXS()}{42}{subsubsection.6.20.2.19}%
+\contentsline {subsection}{\numberline {6.20.3}Documentation des données membres}{42}{subsection.6.20.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.1}\$featured}{42}{subsubsection.6.20.3.1}%
+\contentsline {subsubsection}{\numberline {6.20.3.2}\$id}{43}{subsubsection.6.20.3.2}%
+\contentsline {subsubsection}{\numberline {6.20.3.3}\$image}{43}{subsubsection.6.20.3.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.4}\$name}{43}{subsubsection.6.20.3.4}%
+\contentsline {subsubsection}{\numberline {6.20.3.5}\$price}{43}{subsubsection.6.20.3.5}%
+\contentsline {subsubsection}{\numberline {6.20.3.6}\$stockL}{43}{subsubsection.6.20.3.6}%
+\contentsline {subsubsection}{\numberline {6.20.3.7}\$stockM}{43}{subsubsection.6.20.3.7}%
+\contentsline {subsubsection}{\numberline {6.20.3.8}\$stockS}{43}{subsubsection.6.20.3.8}%
+\contentsline {subsubsection}{\numberline {6.20.3.9}\$stockXL}{43}{subsubsection.6.20.3.9}%
+\contentsline {subsubsection}{\numberline {6.20.3.10}\$stockXS}{43}{subsubsection.6.20.3.10}%
+\contentsline {section}{\numberline {6.21}Référence de la classe App\textbackslash {}Repository\textbackslash {}Sweatshirt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository}{44}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Description détaillée}{44}{subsection.6.21.1}%
+\contentsline {subsection}{\numberline {6.21.2}Documentation des constructeurs et destructeur}{44}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}\_\_construct()}{44}{subsubsection.6.21.2.1}%
+\contentsline {section}{\numberline {6.22}Référence de la classe App\textbackslash {}Form\textbackslash {}Sweatshirt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type}{45}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Description détaillée}{45}{subsection.6.22.1}%
+\contentsline {subsection}{\numberline {6.22.2}Documentation des fonctions membres}{45}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}buildForm()}{45}{subsubsection.6.22.2.1}%
+\contentsline {subsubsection}{\numberline {6.22.2.2}configureOptions()}{45}{subsubsection.6.22.2.2}%
+\contentsline {section}{\numberline {6.23}Référence de la classe App\textbackslash {}Entity\textbackslash {}User}{46}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Description détaillée}{47}{subsection.6.23.1}%
+\contentsline {subsection}{\numberline {6.23.2}Documentation des fonctions membres}{48}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}eraseCredentials()}{48}{subsubsection.6.23.2.1}%
+\contentsline {subsubsection}{\numberline {6.23.2.2}getActivationToken()}{48}{subsubsection.6.23.2.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.3}getDeliveryAddress()}{48}{subsubsection.6.23.2.3}%
+\contentsline {subsubsection}{\numberline {6.23.2.4}getEmail()}{48}{subsubsection.6.23.2.4}%
+\contentsline {subsubsection}{\numberline {6.23.2.5}getId()}{48}{subsubsection.6.23.2.5}%
+\contentsline {subsubsection}{\numberline {6.23.2.6}getPassword()}{48}{subsubsection.6.23.2.6}%
+\contentsline {subsubsection}{\numberline {6.23.2.7}getRoles()}{49}{subsubsection.6.23.2.7}%
+\contentsline {subsubsection}{\numberline {6.23.2.8}getUserIdentifier()}{49}{subsubsection.6.23.2.8}%
+\contentsline {subsubsection}{\numberline {6.23.2.9}getUsername()}{49}{subsubsection.6.23.2.9}%
+\contentsline {subsubsection}{\numberline {6.23.2.10}isVerified()}{49}{subsubsection.6.23.2.10}%
+\contentsline {subsubsection}{\numberline {6.23.2.11}setActivationToken()}{49}{subsubsection.6.23.2.11}%
+\contentsline {subsubsection}{\numberline {6.23.2.12}setDeliveryAddress()}{49}{subsubsection.6.23.2.12}%
+\contentsline {subsubsection}{\numberline {6.23.2.13}setEmail()}{50}{subsubsection.6.23.2.13}%
+\contentsline {subsubsection}{\numberline {6.23.2.14}setIsVerified()}{50}{subsubsection.6.23.2.14}%
+\contentsline {subsubsection}{\numberline {6.23.2.15}setPassword()}{50}{subsubsection.6.23.2.15}%
+\contentsline {subsubsection}{\numberline {6.23.2.16}setRoles()}{50}{subsubsection.6.23.2.16}%
+\contentsline {subsubsection}{\numberline {6.23.2.17}setUsername()}{50}{subsubsection.6.23.2.17}%
+\contentsline {subsection}{\numberline {6.23.3}Documentation des données membres}{50}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}\$activationToken}{50}{subsubsection.6.23.3.1}%
+\contentsline {subsubsection}{\numberline {6.23.3.2}\$deliveryAddress}{51}{subsubsection.6.23.3.2}%
+\contentsline {subsubsection}{\numberline {6.23.3.3}\$email}{51}{subsubsection.6.23.3.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.4}\$id}{51}{subsubsection.6.23.3.4}%
+\contentsline {subsubsection}{\numberline {6.23.3.5}\$isVerified}{51}{subsubsection.6.23.3.5}%
+\contentsline {subsubsection}{\numberline {6.23.3.6}\$password}{51}{subsubsection.6.23.3.6}%
+\contentsline {subsubsection}{\numberline {6.23.3.7}\$roles}{51}{subsubsection.6.23.3.7}%
+\contentsline {subsubsection}{\numberline {6.23.3.8}\$username}{51}{subsubsection.6.23.3.8}%
+\contentsline {section}{\numberline {6.24}Référence de la classe App\textbackslash {}Repository\textbackslash {}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository}{51}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Description détaillée}{52}{subsection.6.24.1}%
+\contentsline {subsection}{\numberline {6.24.2}Documentation des constructeurs et destructeur}{52}{subsection.6.24.2}%
+\contentsline {subsubsection}{\numberline {6.24.2.1}\_\_construct()}{52}{subsubsection.6.24.2.1}%
+\contentsline {subsection}{\numberline {6.24.3}Documentation des fonctions membres}{52}{subsection.6.24.3}%
+\contentsline {subsubsection}{\numberline {6.24.3.1}upgradePassword()}{52}{subsubsection.6.24.3.1}%
+\contentsline {chapter}{\numberline {7}Documentation des fichiers}{55}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Admin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{55}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cart\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{55}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Home\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{55}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{56}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Payment\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{56}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{56}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Registration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{57}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{57}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Security\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{57}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php}{57}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request.php}{58}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sweatshirt.php}{58}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.php}{58}{section.7.13}%
+\contentsline {section}{\numberline {7.14}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Change\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type.php}{59}{section.7.14}%
+\contentsline {section}{\numberline {7.15}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Registration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type.php}{59}{section.7.15}%
+\contentsline {section}{\numberline {7.16}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type.php}{59}{section.7.16}%
+\contentsline {section}{\numberline {7.17}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Form/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sweatshirt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type.php}{59}{section.7.17}%
+\contentsline {section}{\numberline {7.18}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kernel.php}{60}{section.7.18}%
+\contentsline {section}{\numberline {7.19}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository.php}{60}{section.7.19}%
+\contentsline {section}{\numberline {7.20}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sweatshirt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository.php}{60}{section.7.20}%
+\contentsline {section}{\numberline {7.21}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository.php}{61}{section.7.21}%
+\contentsline {section}{\numberline {7.22}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Security/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticator.php}{61}{section.7.22}%
+\contentsline {section}{\numberline {7.23}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Security/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verifier.php}{61}{section.7.23}%
+\contentsline {section}{\numberline {7.24}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cart\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.php}{61}{section.7.24}%
+\contentsline {section}{\numberline {7.25}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stripe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.php}{61}{section.7.25}%

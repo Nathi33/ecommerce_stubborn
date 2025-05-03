@@ -1,0 +1,107 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Cart\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_cart_controller}{}\label{class_app_1_1_controller_1_1_cart_controller}\index{App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}}
+
+
+Contrôleur responsable de la gestion du panier d\textquotesingle{}achats.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Cart\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_cart_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_cart_controller_aa565f237e349dbfea021a5a3d5475497}{add\+To\+Cart}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}} \$sweatshirt, Session\+Interface \$session)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un sweat-\/shirt au panier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_cart_controller_aced51e44e764613a6c7ba70d9ef98e59}{cart}} (Session\+Interface \$session)
+\begin{DoxyCompactList}\small\item\em Affiche les articles dans le panier et le total de la commande. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_cart_controller_a4564dc54938df1e54b45c532dee87706}{remove\+From\+Cart}} (Session\+Interface \$session, int \$index, Request \$request)
+\begin{DoxyCompactList}\small\item\em Permet de supprimer un sweat-\/shirt du panier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur responsable de la gestion du panier d\textquotesingle{}achats. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_cart_controller_aa565f237e349dbfea021a5a3d5475497}\index{App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}!addToCart@{addToCart}}
+\index{addToCart@{addToCart}!App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}}
+\doxysubsubsection{\texorpdfstring{addToCart()}{addToCart()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_cart_controller_aa565f237e349dbfea021a5a3d5475497} 
+App\textbackslash{}\+Controller\textbackslash{}\+Cart\+Controller\+::add\+To\+Cart (\begin{DoxyParamCaption}\item[{Request}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}}}]{\$sweatshirt}{, }\item[{Session\+Interface}]{\$session}{}\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}ajouter un sweat-\/shirt au panier. 
+
+Cette méthode récupère les informations du sweat-\/shirt, la taille choisie par l\textquotesingle{}utilisateur, et les ajoute dans le panier stocké en session.
+
+@\+Route("{}/cart/add/\{id\}"{}, name="{}app\+\_\+cart\+\_\+add"{}, methods=\{"{}\+POST"{}\})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request & {\em \$request} & La requête HTTP contenant les informations envoyées par le formulaire. \\
+\hline
+Sweatshirt & {\em \$sweatshirt} & L\textquotesingle{}entité sweat-\/shirt à ajouter au panier. \\
+\hline
+Session\+Interface & {\em \$session} & L\textquotesingle{}interface pour gérer les données de session. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response Redirige vers la page du panier après l\textquotesingle{}ajout du sweat-\/shirt. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_cart_controller_aced51e44e764613a6c7ba70d9ef98e59}\index{App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}!cart@{cart}}
+\index{cart@{cart}!App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}}
+\doxysubsubsection{\texorpdfstring{cart()}{cart()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_cart_controller_aced51e44e764613a6c7ba70d9ef98e59} 
+App\textbackslash{}\+Controller\textbackslash{}\+Cart\+Controller\+::cart (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les articles dans le panier et le total de la commande. 
+
+Cette méthode récupère les éléments du panier depuis la session et calcule le total.
+
+@\+Route("{}/cart"{}, name="{}app\+\_\+cart"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Session\+Interface & {\em \$session} & L\textquotesingle{}interface pour gérer les données de session. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response Affiche la vue du panier avec les articles et le total. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_cart_controller_a4564dc54938df1e54b45c532dee87706}\index{App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}!removeFromCart@{removeFromCart}}
+\index{removeFromCart@{removeFromCart}!App\textbackslash{}Controller\textbackslash{}CartController@{App\textbackslash{}Controller\textbackslash{}CartController}}
+\doxysubsubsection{\texorpdfstring{removeFromCart()}{removeFromCart()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_cart_controller_a4564dc54938df1e54b45c532dee87706} 
+App\textbackslash{}\+Controller\textbackslash{}\+Cart\+Controller\+::remove\+From\+Cart (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session}{, }\item[{int}]{\$index}{, }\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+
+
+Permet de supprimer un sweat-\/shirt du panier. 
+
+Cette méthode récupère le panier depuis la session et supprime l\textquotesingle{}élément à l\textquotesingle{}index spécifié. Elle vérifie également le token CSRF pour assurer la sécurité de la suppression.
+
+@\+Route("{}/cart/remove/\{index\}"{}, name="{}app\+\_\+cart\+\_\+remove"{}, methods=\{"{}\+POST"{}\})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Session\+Interface & {\em \$session} & L\textquotesingle{}interface pour gérer les données de session. \\
+\hline
+int & {\em \$index} & L\textquotesingle{}index de l\textquotesingle{}article à supprimer dans le panier. \\
+\hline
+Request & {\em \$request} & La requête HTTP contenant le token CSRF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response Redirige vers la page du panier après la suppression de l\textquotesingle{}article. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_cart_controller_8php}{Cart\+Controller.\+php}}\end{DoxyCompactItemize}

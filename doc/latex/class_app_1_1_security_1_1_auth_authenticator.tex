@@ -1,0 +1,133 @@
+\doxysection{Référence de la classe App\textbackslash{}Security\textbackslash{}Auth\+Authenticator}
+\hypertarget{class_app_1_1_security_1_1_auth_authenticator}{}\label{class_app_1_1_security_1_1_auth_authenticator}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+
+
+Authenticator personnalisé pour la connexion des utilisateurs.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Security\textbackslash{}Auth\+Authenticator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_security_1_1_auth_authenticator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_security_1_1_auth_authenticator_a4093d857d469138386c587936aa3144d}{\+\_\+\+\_\+construct}} (private Url\+Generator\+Interface \$url\+Generator)
+\item 
+\mbox{\hyperlink{class_app_1_1_security_1_1_auth_authenticator_a091705bb0e7f4e5971fc20301d0271bf}{authenticate}} (Request \$request)
+\begin{DoxyCompactList}\small\item\em Crée le Passport utilisé pour authentifier un utilisateur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_security_1_1_auth_authenticator_aed2b1468911152291c516fa080c1a7c4}{on\+Authentication\+Success}} (Request \$request, Token\+Interface \$token, string \$firewall\+Name)
+\begin{DoxyCompactList}\small\item\em Gère la redirection après une authentification réussie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_app_1_1_security_1_1_auth_authenticator_af4e87b91c867de80bb8c2cc6155e5f0b}{LOGIN\+\_\+\+ROUTE}} = \textquotesingle{}app\+\_\+login\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_security_1_1_auth_authenticator_a4f27184dbbc3d0254956556c85ce4334}{get\+Login\+Url}} (Request \$request)
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}URL de la page de connexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Authenticator personnalisé pour la connexion des utilisateurs. 
+
+Étend Abstract\+Login\+Form\+Authenticator pour gérer le processus d\textquotesingle{}authentification via un formulaire. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_app_1_1_security_1_1_auth_authenticator_a4093d857d469138386c587936aa3144d}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_security_1_1_auth_authenticator_a4093d857d469138386c587936aa3144d} 
+App\textbackslash{}\+Security\textbackslash{}\+Auth\+Authenticator\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{private Url\+Generator\+Interface}]{\$url\+Generator}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_security_1_1_auth_authenticator_a091705bb0e7f4e5971fc20301d0271bf}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily \label{class_app_1_1_security_1_1_auth_authenticator_a091705bb0e7f4e5971fc20301d0271bf} 
+App\textbackslash{}\+Security\textbackslash{}\+Auth\+Authenticator\+::authenticate (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+
+
+Crée le Passport utilisé pour authentifier un utilisateur. 
+
+Ce Passport contient \+:
+\begin{DoxyItemize}
+\item le badge User\+Badge avec le nom d\textquotesingle{}utilisateur
+\item les credentials de mot de passe
+\item un badge CSRF pour vérifier le token
+\item un badge Remember\+Me pour activer l\textquotesingle{}option "{}se souvenir de moi"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Passport 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_security_1_1_auth_authenticator_a4f27184dbbc3d0254956556c85ce4334}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}!getLoginUrl@{getLoginUrl}}
+\index{getLoginUrl@{getLoginUrl}!App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+\doxysubsubsection{\texorpdfstring{getLoginUrl()}{getLoginUrl()}}
+{\footnotesize\ttfamily \label{class_app_1_1_security_1_1_auth_authenticator_a4f27184dbbc3d0254956556c85ce4334} 
+App\textbackslash{}\+Security\textbackslash{}\+Auth\+Authenticator\+::get\+Login\+Url (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Retourne l\textquotesingle{}URL de la page de connexion. 
+
+Utilisé pour rediriger l’utilisateur si l’authentification échoue.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_security_1_1_auth_authenticator_aed2b1468911152291c516fa080c1a7c4}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}!onAuthenticationSuccess@{onAuthenticationSuccess}}
+\index{onAuthenticationSuccess@{onAuthenticationSuccess}!App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+\doxysubsubsection{\texorpdfstring{onAuthenticationSuccess()}{onAuthenticationSuccess()}}
+{\footnotesize\ttfamily \label{class_app_1_1_security_1_1_auth_authenticator_aed2b1468911152291c516fa080c1a7c4} 
+App\textbackslash{}\+Security\textbackslash{}\+Auth\+Authenticator\+::on\+Authentication\+Success (\begin{DoxyParamCaption}\item[{Request}]{\$request}{, }\item[{Token\+Interface}]{\$token}{, }\item[{string}]{\$firewall\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Gère la redirection après une authentification réussie. 
+
+Redirige vers la page initialement demandée (target\+Path), si elle existe, sinon vers la page d’accueil.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request & {\em \$request} & \\
+\hline
+Token\+Interface & {\em \$token} & \\
+\hline
+string & {\em \$firewall\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response\texorpdfstring{$\vert$}{|}null 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_app_1_1_security_1_1_auth_authenticator_af4e87b91c867de80bb8c2cc6155e5f0b}\index{App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}!LOGIN\_ROUTE@{LOGIN\_ROUTE}}
+\index{LOGIN\_ROUTE@{LOGIN\_ROUTE}!App\textbackslash{}Security\textbackslash{}AuthAuthenticator@{App\textbackslash{}Security\textbackslash{}AuthAuthenticator}}
+\doxysubsubsection{\texorpdfstring{LOGIN\_ROUTE}{LOGIN\_ROUTE}}
+{\footnotesize\ttfamily \label{class_app_1_1_security_1_1_auth_authenticator_af4e87b91c867de80bb8c2cc6155e5f0b} 
+const App\textbackslash{}\+Security\textbackslash{}\+Auth\+Authenticator\+::\+LOGIN\+\_\+\+ROUTE = \textquotesingle{}app\+\_\+login\textquotesingle{}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Security/\mbox{\hyperlink{_auth_authenticator_8php}{Auth\+Authenticator.\+php}}\end{DoxyCompactItemize}

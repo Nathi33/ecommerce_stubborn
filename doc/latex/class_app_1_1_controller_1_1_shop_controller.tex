@@ -1,0 +1,51 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Shop\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_shop_controller}{}\label{class_app_1_1_controller_1_1_shop_controller}\index{App\textbackslash{}Controller\textbackslash{}ShopController@{App\textbackslash{}Controller\textbackslash{}ShopController}}
+
+
+Contrôleur de la boutique affichant la liste des sweatshirts.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Shop\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_shop_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_shop_controller_a5a983cef7fd858529ef5cf7048fd1e64}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_sweatshirt_repository}{Sweatshirt\+Repository}} \$sweatshirt\+Repository, Request \$request)
+\begin{DoxyCompactList}\small\item\em Affiche la liste des sweatshirts disponibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur de la boutique affichant la liste des sweatshirts. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_shop_controller_a5a983cef7fd858529ef5cf7048fd1e64}\index{App\textbackslash{}Controller\textbackslash{}ShopController@{App\textbackslash{}Controller\textbackslash{}ShopController}!index@{index}}
+\index{index@{index}!App\textbackslash{}Controller\textbackslash{}ShopController@{App\textbackslash{}Controller\textbackslash{}ShopController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_shop_controller_a5a983cef7fd858529ef5cf7048fd1e64} 
+App\textbackslash{}\+Controller\textbackslash{}\+Shop\+Controller\+::index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_sweatshirt_repository}{Sweatshirt\+Repository}}}]{\$sweatshirt\+Repository}{, }\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la liste des sweatshirts disponibles. 
+
+Cette méthode peut filtrer les produits par plage de prix via un paramètre GET {\ttfamily price\+Range} (ex\+: {\ttfamily 20-\/50}).
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Sweatshirt\+Repository & {\em \$sweatshirt\+Repository} & Le repository pour accéder aux sweatshirts \\
+\hline
+Request & {\em \$request} & La requête HTTP contenant éventuellement le paramètre de filtre\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La réponse contenant le rendu de la page boutique 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_shop_controller_8php}{Shop\+Controller.\+php}}\end{DoxyCompactItemize}

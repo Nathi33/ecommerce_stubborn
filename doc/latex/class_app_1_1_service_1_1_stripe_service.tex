@@ -1,0 +1,67 @@
+\doxysection{Référence de la classe App\textbackslash{}Service\textbackslash{}Stripe\+Service}
+\hypertarget{class_app_1_1_service_1_1_stripe_service}{}\label{class_app_1_1_service_1_1_stripe_service}\index{App\textbackslash{}Service\textbackslash{}StripeService@{App\textbackslash{}Service\textbackslash{}StripeService}}
+
+
+Service pour interagir avec l\textquotesingle{}API Stripe, en particulier pour créer une session de paiement.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_stripe_service_ae27886d5d19e55f94e51ef7d5613d5aa}{\+\_\+\+\_\+construct}} (private string \$stripe\+Secret\+Key)
+\begin{DoxyCompactList}\small\item\em Constructeur du service, initialise la clé secrète Stripe pour l\textquotesingle{}authentification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_service_1_1_stripe_service_ad09562c66fc672a8ed58b07edd081453}{create\+Checkout\+Session}} (array \$line\+Items, string \$success\+Url, string \$cancel\+Url)
+\begin{DoxyCompactList}\small\item\em Crée une session de paiement avec Stripe Checkout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Service pour interagir avec l\textquotesingle{}API Stripe, en particulier pour créer une session de paiement. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_app_1_1_service_1_1_stripe_service_ae27886d5d19e55f94e51ef7d5613d5aa}\index{App\textbackslash{}Service\textbackslash{}StripeService@{App\textbackslash{}Service\textbackslash{}StripeService}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!App\textbackslash{}Service\textbackslash{}StripeService@{App\textbackslash{}Service\textbackslash{}StripeService}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_service_1_1_stripe_service_ae27886d5d19e55f94e51ef7d5613d5aa} 
+App\textbackslash{}\+Service\textbackslash{}\+Stripe\+Service\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{private string}]{\$stripe\+Secret\+Key}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur du service, initialise la clé secrète Stripe pour l\textquotesingle{}authentification. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$stripe\+Secret\+Key} & La clé secrète de l\textquotesingle{}API Stripe pour effectuer les requêtes. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_service_1_1_stripe_service_ad09562c66fc672a8ed58b07edd081453}\index{App\textbackslash{}Service\textbackslash{}StripeService@{App\textbackslash{}Service\textbackslash{}StripeService}!createCheckoutSession@{createCheckoutSession}}
+\index{createCheckoutSession@{createCheckoutSession}!App\textbackslash{}Service\textbackslash{}StripeService@{App\textbackslash{}Service\textbackslash{}StripeService}}
+\doxysubsubsection{\texorpdfstring{createCheckoutSession()}{createCheckoutSession()}}
+{\footnotesize\ttfamily \label{class_app_1_1_service_1_1_stripe_service_ad09562c66fc672a8ed58b07edd081453} 
+App\textbackslash{}\+Service\textbackslash{}\+Stripe\+Service\+::create\+Checkout\+Session (\begin{DoxyParamCaption}\item[{array}]{\$line\+Items}{, }\item[{string}]{\$success\+Url}{, }\item[{string}]{\$cancel\+Url}{}\end{DoxyParamCaption})}
+
+
+
+Crée une session de paiement avec Stripe Checkout. 
+
+Cette méthode génère une session de paiement que l\textquotesingle{}utilisateur peut utiliser pour compléter son achat en ligne. Elle inclut les éléments du panier, les URLs de succès et d\textquotesingle{}annulation.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+array & {\em \$line\+Items} & Les éléments du panier pour le paiement (par exemple, articles, prix). \\
+\hline
+string & {\em \$success\+Url} & L\textquotesingle{}URL où l\textquotesingle{}utilisateur sera redirigé après un paiement réussi. \\
+\hline
+string & {\em \$cancel\+Url} & L\textquotesingle{}URL où l\textquotesingle{}utilisateur sera redirigé si le paiement est annulé.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Session La session de paiement Stripe créée. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Service/\mbox{\hyperlink{_stripe_service_8php}{Stripe\+Service.\+php}}\end{DoxyCompactItemize}

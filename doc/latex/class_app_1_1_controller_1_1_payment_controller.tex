@@ -1,0 +1,121 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Payment\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_payment_controller}{}\label{class_app_1_1_controller_1_1_payment_controller}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+
+
+Contrôleur responsable de la gestion des paiements via Stripe.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Payment\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_payment_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_payment_controller_a546cde393aa1e15465a9921a2ba03649}{\+\_\+\+\_\+construct}} (Request\+Stack \$request\+Stack)
+\begin{DoxyCompactList}\small\item\em Constructeur du contrôleur de paiement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_payment_controller_a090ddf1d5ba6af79214a3bca8326471c}{checkout}} (\mbox{\hyperlink{class_app_1_1_service_1_1_stripe_service}{Stripe\+Service}} \$stripe\+Service)
+\begin{DoxyCompactList}\small\item\em Crée une session de paiement Stripe à partir des éléments du panier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_payment_controller_a3500a809c2735d5172dbbce1a4c20be5}{success}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la page de confirmation après un paiement réussi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_payment_controller_aa97aa467acea740a602de8b1c84abb9a}{cancel}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la page d’annulation de paiement si l’utilisateur quitte Stripe sans valider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_payment_controller_af4417d478398d2ef16404f1bdb9ffc27}{\$session}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur responsable de la gestion des paiements via Stripe. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_app_1_1_controller_1_1_payment_controller_a546cde393aa1e15465a9921a2ba03649}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_payment_controller_a546cde393aa1e15465a9921a2ba03649} 
+App\textbackslash{}\+Controller\textbackslash{}\+Payment\+Controller\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Request\+Stack}]{\$request\+Stack}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur du contrôleur de paiement. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request\+Stack & {\em \$request\+Stack} & Pile de requêtes pour accéder à la session. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_payment_controller_aa97aa467acea740a602de8b1c84abb9a}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}!cancel@{cancel}}
+\index{cancel@{cancel}!App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_payment_controller_aa97aa467acea740a602de8b1c84abb9a} 
+App\textbackslash{}\+Controller\textbackslash{}\+Payment\+Controller\+::cancel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la page d’annulation de paiement si l’utilisateur quitte Stripe sans valider. 
+
+@\+Route("{}/cancel"{}, name="{}app\+\_\+payment\+\_\+cancel"{})
+
+\begin{DoxyReturn}{Renvoie}
+Response La vue d’annulation du paiement. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_payment_controller_a090ddf1d5ba6af79214a3bca8326471c}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}!checkout@{checkout}}
+\index{checkout@{checkout}!App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+\doxysubsubsection{\texorpdfstring{checkout()}{checkout()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_payment_controller_a090ddf1d5ba6af79214a3bca8326471c} 
+App\textbackslash{}\+Controller\textbackslash{}\+Payment\+Controller\+::checkout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_service_1_1_stripe_service}{Stripe\+Service}}}]{\$stripe\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Crée une session de paiement Stripe à partir des éléments du panier. 
+
+Redirige vers la page de paiement Stripe si le panier contient des articles, sinon redirige vers la page du panier avec un message d\textquotesingle{}avertissement.
+
+@\+Route("{}/create-\/checkout-\/session"{}, name="{}app\+\_\+create\+\_\+checkout\+\_\+session"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Stripe\+Service & {\em \$stripe\+Service} & Service personnalisé pour la gestion de Stripe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response Redirection vers l\textquotesingle{}URL de paiement Stripe ou la page panier. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_payment_controller_a3500a809c2735d5172dbbce1a4c20be5}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}!success@{success}}
+\index{success@{success}!App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+\doxysubsubsection{\texorpdfstring{success()}{success()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_payment_controller_a3500a809c2735d5172dbbce1a4c20be5} 
+App\textbackslash{}\+Controller\textbackslash{}\+Payment\+Controller\+::success (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la page de confirmation après un paiement réussi. 
+
+Vide le panier de la session.
+
+@\+Route("{}/success"{}, name="{}app\+\_\+payment\+\_\+success"{})
+
+\begin{DoxyReturn}{Renvoie}
+Response La vue de confirmation du paiement. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_app_1_1_controller_1_1_payment_controller_af4417d478398d2ef16404f1bdb9ffc27}\index{App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}!\$session@{\$session}}
+\index{\$session@{\$session}!App\textbackslash{}Controller\textbackslash{}PaymentController@{App\textbackslash{}Controller\textbackslash{}PaymentController}}
+\doxysubsubsection{\texorpdfstring{\$session}{\$session}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_payment_controller_af4417d478398d2ef16404f1bdb9ffc27} 
+App\textbackslash{}\+Controller\textbackslash{}\+Payment\+Controller\+::\$session\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_payment_controller_8php}{Payment\+Controller.\+php}}\end{DoxyCompactItemize}
