@@ -7,37 +7,22 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
+ * Repository pour l'entité Sweatshirt.
+ *
+ * Ce repository fournit des méthodes d'accès à la base de données pour les objets de type Sweatshirt.
+ * Il hérite des méthodes standard de Doctrine telles que find(), findAll(), findBy(), findOneBy(), etc.
+ *
  * @extends ServiceEntityRepository<Sweatshirt>
  */
 class SweatshirtRepository extends ServiceEntityRepository
 {
+    /**
+     * Constructeur du repository Sweatshirt.
+     *
+     * @param ManagerRegistry $registry Le registre du gestionnaire Doctrine
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Sweatshirt::class);
     }
-
-    //    /**
-    //     * @return Sweatshirt[] Returns an array of Sweatshirt objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('s.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?Sweatshirt
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

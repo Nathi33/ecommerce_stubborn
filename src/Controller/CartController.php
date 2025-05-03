@@ -9,9 +9,23 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Attribute\Route;
 
+/**
+ * Contrôleur responsable de la gestion du panier d'achats.
+ */
 final class CartController extends AbstractController
 {
-    // Route pour ajouter un sweat au panier
+    /**
+     * Permet d'ajouter un sweat-shirt au panier.
+     * Cette méthode récupère les informations du sweat-shirt, la taille choisie par l'utilisateur,
+     * et les ajoute dans le panier stocké en session.
+     *
+     * @Route("/cart/add/{id}", name="app_cart_add", methods={"POST"})
+     *
+     * @param Request $request La requête HTTP contenant les informations envoyées par le formulaire.
+     * @param Sweatshirt $sweatshirt L'entité sweat-shirt à ajouter au panier.
+     * @param SessionInterface $session L'interface pour gérer les données de session.
+     * @return Response Redirige vers la page du panier après l'ajout du sweat-shirt.
+     */
     #[Route('/cart/add/{id}', name: 'app_cart_add', methods: ['POST'])]
     public function addToCart(Request $request, Sweatshirt $sweatshirt, SessionInterface $session): Response
     {
@@ -37,7 +51,15 @@ final class CartController extends AbstractController
         return $this->redirectToRoute('app_cart');
     }
 
-    // Route pour afficher le panier
+    /**
+     * Affiche les articles dans le panier et le total de la commande.
+     * Cette méthode récupère les éléments du panier depuis la session et calcule le total.
+     *
+     * @Route("/cart", name="app_cart")
+     *
+     * @param SessionInterface $session L'interface pour gérer les données de session.
+     * @return Response Affiche la vue du panier avec les articles et le total.
+     */
     #[Route('/cart', name: 'app_cart')]
     public function cart(SessionInterface $session): Response
     {
@@ -57,7 +79,18 @@ final class CartController extends AbstractController
         ]);
     }
 
-    // Route pour supprimer un sweat du panier
+    /**
+     * Permet de supprimer un sweat-shirt du panier.
+     * Cette méthode récupère le panier depuis la session et supprime l'élément à l'index spécifié.
+     * Elle vérifie également le token CSRF pour assurer la sécurité de la suppression.
+     *
+     * @Route("/cart/remove/{index}", name="app_cart_remove", methods={"POST"})
+     *
+     * @param SessionInterface $session L'interface pour gérer les données de session.
+     * @param int $index L'index de l'article à supprimer dans le panier.
+     * @param Request $request La requête HTTP contenant le token CSRF.
+     * @return Response Redirige vers la page du panier après la suppression de l'article.
+     */
     #[Route('/cart/remove/{index}', name: 'app_cart_remove', methods: ['POST'])]
     public function removeFromCart(SessionInterface $session, int $index, Request $request): Response
     {

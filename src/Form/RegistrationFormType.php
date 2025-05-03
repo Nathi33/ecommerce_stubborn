@@ -4,17 +4,28 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+/**
+ * Formulaire d'inscription d'un nouvel utilisateur.
+ * 
+ * Ce formulaire permet de collecter les informations nécessaires à la création d'un compte utilisateur :
+ * email, nom d'utilisateur, adresse de livraison et mot de passe (avec confirmation).
+ * Les mots de passe ne sont pas mappés à l'entité User afin d'être encodés dans le contrôleur.
+ */
 class RegistrationFormType extends AbstractType
 {
+    /**
+     * Construit le formulaire d'inscription.
+     *
+     * @param FormBuilderInterface $builder Le constructeur de formulaire
+     * @param array $options Les options passées au formulaire
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -37,8 +48,6 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('plainPassword', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
@@ -71,6 +80,11 @@ class RegistrationFormType extends AbstractType
         ;
     }
 
+    /**
+     * Configure les options par défaut du formulaire, notamment la classe de données liée.
+     *
+     * @param OptionsResolver $resolver Le résolveur d'options
+     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

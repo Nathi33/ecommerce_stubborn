@@ -13,50 +13,96 @@ use Symfony\Component\Security\Core\User\UserInterface;
 #[ORM\Table(name: '`user`')]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
 #[UniqueEntity(fields: ['email'], message: 'Il existe déjà un compte avec cette adresse email.')]
+/**
+ * Représente un utilisateur de l'application.
+ */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    /**
+     * Identifiant unique de l'utilisateur.
+     *
+     * @var int|null
+     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
+    /**
+     * Adresse email de l'utilisateur.
+     *
+     * @var string|null
+     */
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
     /**
-     * @var list<string> The user roles
+     * Rôles attribués à l'utilisateur (ex. ROLE_USER, ROLE_ADMIN).
+     *
+     * @var list<string>
      */
     #[ORM\Column]
     private array $roles = [];
 
     /**
-     * @var string The hashed password
+     * Mot de passe haché de l'utilisateur.
+     *
+     * @var string|null
      */
     #[ORM\Column]
     private ?string $password = null;
 
+    /**
+     * Nom d'utilisateur (identifiant visuel).
+     *
+     * @var string|null
+     */
     #[ORM\Column(length: 180, unique: true)]
     private ?string $username = null;
 
+    /**
+     * Adresse de livraison de l'utilisateur.
+     *
+     * @var string|null
+     */
     #[ORM\Column(type: 'string', length: 255, nullable: false)]
     private ?string $deliveryAddress = null;
 
+    /**
+     * Statut de vérification du compte.
+     *
+     * @var bool
+     */
     #[ORM\Column]
     private bool $isVerified = false;
 
+    /**
+     * Token d'activation utilisé pour vérifier un compte utilisateur.
+     *
+     * @var string|null
+     */
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private ?string $activationToken = null;
 
+    /**
+     * Retourne l'identifiant de l'utilisateur.
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Retourne l'email de l'utilisateur.
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * Définit l'email de l'utilisateur.
+     */
     public function setEmail(string $email): static
     {
         $this->email = $email;
@@ -64,8 +110,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * A visual identifier that represents this user.
+     /**
+     * Retourne l'identifiant unique de l'utilisateur (utilisé par le système de sécurité).
      *
      * @see UserInterface
      */
@@ -75,6 +121,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
+     * Retourne la liste des rôles de l'utilisateur.
+     *
      * @see UserInterface
      *
      * @return list<string>
@@ -82,13 +130,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
+        // Garantit que chaque utilisateur a au moins le rôle ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
 
     /**
+     * Définit les rôles de l'utilisateur.
+     *
      * @param list<string> $roles
      */
     public function setRoles(array $roles): static
@@ -99,6 +149,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
+     * Retourne le mot de passe haché de l'utilisateur.
+     *
      * @see PasswordAuthenticatedUserInterface
      */
     public function getPassword(): ?string
@@ -106,6 +158,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
+    /**
+     * Définit le mot de passe haché de l'utilisateur.
+     */
     public function setPassword(string $password): static
     {
         $this->password = $password;
@@ -114,6 +169,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
+     * Méthode utilisée pour effacer les données sensibles temporaires.
+     *
      * @see UserInterface
      */
     public function eraseCredentials(): void
@@ -122,11 +179,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
+    /**
+     * Retourne le nom d'utilisateur.
+     */
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
+    /**
+     * Définit le nom d'utilisateur.
+     */
     public function setUsername(string $username): static
     {
         $this->username = $username;
@@ -134,11 +197,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    /**
+     * Retourne l'adresse de livraison.
+     */
     public function getDeliveryAddress(): ?string
     {
         return $this->deliveryAddress;
     }
 
+    /**
+     * Définit l'adresse de livraison.
+     */
     public function setDeliveryAddress(string $deliveryAddress): self
     {
         $this->deliveryAddress = $deliveryAddress;
@@ -146,11 +215,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    /**
+     * Vérifie si l'utilisateur a confirmé son compte.
+     */
     public function isVerified(): bool
     {
         return $this->isVerified;
     }
 
+    /**
+     * Définit si le compte utilisateur est vérifié.
+     */
     public function setIsVerified(bool $isVerified): static
     {
         $this->isVerified = $isVerified;
@@ -158,11 +233,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    /**
+     * Retourne le Token d'activation du compte.
+     */
     public function getActivationToken(): ?string
     {
         return $this->activationToken;
     }
 
+    /**
+     * Définit le Token d'activation du compte.
+     */
     public function setActivationToken(?string $activationToken): self
     {
         $this->activationToken = $activationToken;

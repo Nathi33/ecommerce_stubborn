@@ -9,11 +9,23 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\NotCompromisedPassword;
-use Symfony\Component\Validator\Constraints\PasswordStrength;
 
+/**
+ * Formulaire permettant à un utilisateur de changer son mot de passe.
+ * 
+ * Ce formulaire utilise un champ de mot de passe répété pour forcer la confirmation du mot de passe.
+ * Le mot de passe doit avoir une longueur minimale de 8 caractères et ne doit pas être vide.
+ * Le champ n'est pas mappé à une propriété de l'entité (mapped: false), car l'encodage du mot de passe
+ * est généralement géré manuellement dans le contrôleur.
+ */
 class ChangePasswordFormType extends AbstractType
 {
+    /**
+     * Construit le formulaire de changement de mot de passe.
+     *
+     * @param FormBuilderInterface $builder Le constructeur de formulaire
+     * @param array $options Les options du formulaire
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -32,13 +44,9 @@ class ChangePasswordFormType extends AbstractType
                         new Length([
                             'min' => 8,
                             'minMessage' => 'Votre mot de passe doit comporter au moins {{ limit }} caractères',
-                            // max length allowed by Symfony for security reasons
+                            // Longueur maximale imposée par Symfony pour des raisons de sécurité
                             'max' => 4096,
                         ]),
-                        // new PasswordStrength([
-                        //     'minScore' => 1,
-                        // ]),
-                        //new NotCompromisedPassword(),
                     ],
                     'label' => 'Nouveau mot de passe',
                 ],
@@ -46,13 +54,18 @@ class ChangePasswordFormType extends AbstractType
                     'label' => 'Confirmer le nouveau mot de passe',
                 ],
                 'invalid_message' => 'Les deux mots de passe doivent correspondre.',
-                // Instead of being set onto the object directly,
-                // this is read and encoded in the controller
+                // Le champ n'est pas mappé à une propriété de l'entité User,
+                // car le traitement est géré dans le contrôleur
                 'mapped' => false,
             ])
         ;
     }
 
+    /**
+     * Configure les options par défaut du formulaire.
+     *
+     * @param OptionsResolver $resolver Le résolveur d'options
+     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([]);
