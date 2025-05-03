@@ -1,0 +1,51 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Product\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_product_controller}{}\label{class_app_1_1_controller_1_1_product_controller}\index{App\textbackslash{}Controller\textbackslash{}ProductController@{App\textbackslash{}Controller\textbackslash{}ProductController}}
+
+
+Contrôleur responsable de l\textquotesingle{}affichage des détails d\textquotesingle{}un sweat-\/shirt.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Product\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_product_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_product_controller_a8bb883e049fad749875819b893990b71}{show}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}} \$sweatshirt)
+\begin{DoxyCompactList}\small\item\em Affiche la fiche produit d\textquotesingle{}un sweat-\/shirt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur responsable de l\textquotesingle{}affichage des détails d\textquotesingle{}un sweat-\/shirt. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_product_controller_a8bb883e049fad749875819b893990b71}\index{App\textbackslash{}Controller\textbackslash{}ProductController@{App\textbackslash{}Controller\textbackslash{}ProductController}!show@{show}}
+\index{show@{show}!App\textbackslash{}Controller\textbackslash{}ProductController@{App\textbackslash{}Controller\textbackslash{}ProductController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_product_controller_a8bb883e049fad749875819b893990b71} 
+App\textbackslash{}\+Controller\textbackslash{}\+Product\+Controller\+::show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}}}]{\$sweatshirt}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la fiche produit d\textquotesingle{}un sweat-\/shirt. 
+
+Cette méthode récupère un sweat-\/shirt à partir de son identifiant (grâce au Param\+Converter de Symfony) et retourne une vue détaillée.
+
+@\+Route("{}/product/\{id\}"{}, name="{}app\+\_\+product"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Sweatshirt & {\em \$sweatshirt} & L\textquotesingle{}entité du sweat-\/shirt à afficher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La vue contenant les détails du sweat-\/shirt. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_product_controller_8php}{Product\+Controller.\+php}}\end{DoxyCompactItemize}

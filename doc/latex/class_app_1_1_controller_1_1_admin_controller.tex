@@ -1,0 +1,111 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Admin\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_admin_controller}{}\label{class_app_1_1_controller_1_1_admin_controller}\index{App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}}
+
+
+Contrôleur responsable de la gestion des opérations administratives sur les sweat-\/shirts.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Admin\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_admin_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_controller_acef91cb50b750dceb77a6aa04c2b7537}{index}} (Request \$request, Entity\+Manager\+Interface \$em, Slugger\+Interface \$slugger)
+\begin{DoxyCompactList}\small\item\em Affiche la liste des sweat-\/shirts et permet d\textquotesingle{}ajouter un nouveau sweat-\/shirt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_controller_ac231e5ae807ddc881a2c9059127eb186}{edit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}} \$sweatshirt, Request \$request, Entity\+Manager\+Interface \$em, Slugger\+Interface \$slugger)
+\begin{DoxyCompactList}\small\item\em Permet de modifier un sweat-\/shirt existant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_controller_a01f6c5fb08c7d0b8efc22ce74a919375}{delete}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}} \$sweatshirt, Entity\+Manager\+Interface \$em)
+\begin{DoxyCompactList}\small\item\em Permet de supprimer un sweat-\/shirt de la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur responsable de la gestion des opérations administratives sur les sweat-\/shirts. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_admin_controller_a01f6c5fb08c7d0b8efc22ce74a919375}\index{App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}!delete@{delete}}
+\index{delete@{delete}!App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_admin_controller_a01f6c5fb08c7d0b8efc22ce74a919375} 
+App\textbackslash{}\+Controller\textbackslash{}\+Admin\+Controller\+::delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}}}]{\$sweatshirt}{, }\item[{Entity\+Manager\+Interface}]{\$em}{}\end{DoxyParamCaption})}
+
+
+
+Permet de supprimer un sweat-\/shirt de la base de données. 
+
+Cette méthode gère la suppression d\textquotesingle{}un sweat-\/shirt spécifique.
+
+@\+Route("{}/admin/delete/\{id\}"{}, name="{}app\+\_\+admin\+\_\+delete"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Sweatshirt & {\em \$sweatshirt} & L\textquotesingle{}entité sweat-\/shirt à supprimer. \\
+\hline
+Entity\+Manager\+Interface & {\em \$em} & L\textquotesingle{}interface pour gérer les entités Doctrine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La réponse redirigeant vers la page d\textquotesingle{}administration après la suppression. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_admin_controller_ac231e5ae807ddc881a2c9059127eb186}\index{App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}!edit@{edit}}
+\index{edit@{edit}!App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_admin_controller_ac231e5ae807ddc881a2c9059127eb186} 
+App\textbackslash{}\+Controller\textbackslash{}\+Admin\+Controller\+::edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_sweatshirt}{Sweatshirt}}}]{\$sweatshirt}{, }\item[{Request}]{\$request}{, }\item[{Entity\+Manager\+Interface}]{\$em}{, }\item[{Slugger\+Interface}]{\$slugger}{}\end{DoxyParamCaption})}
+
+
+
+Permet de modifier un sweat-\/shirt existant. 
+
+Cette méthode gère l\textquotesingle{}édition des données du sweat-\/shirt et le téléchargement d\textquotesingle{}une nouvelle image.
+
+@\+Route("{}/admin/edit/\{id\}"{}, name="{}app\+\_\+admin\+\_\+edit"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Sweatshirt & {\em \$sweatshirt} & L\textquotesingle{}entité sweat-\/shirt à modifier. \\
+\hline
+Request & {\em \$request} & La requête HTTP. \\
+\hline
+Entity\+Manager\+Interface & {\em \$em} & L\textquotesingle{}interface pour gérer les entités Doctrine. \\
+\hline
+Slugger\+Interface & {\em \$slugger} & Le service pour générer un slug à partir du nom de fichier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La réponse contenant la vue avec le formulaire de modification. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_admin_controller_acef91cb50b750dceb77a6aa04c2b7537}\index{App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}!index@{index}}
+\index{index@{index}!App\textbackslash{}Controller\textbackslash{}AdminController@{App\textbackslash{}Controller\textbackslash{}AdminController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_admin_controller_acef91cb50b750dceb77a6aa04c2b7537} 
+App\textbackslash{}\+Controller\textbackslash{}\+Admin\+Controller\+::index (\begin{DoxyParamCaption}\item[{Request}]{\$request}{, }\item[{Entity\+Manager\+Interface}]{\$em}{, }\item[{Slugger\+Interface}]{\$slugger}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la liste des sweat-\/shirts et permet d\textquotesingle{}ajouter un nouveau sweat-\/shirt. 
+
+Cette méthode gère le formulaire d\textquotesingle{}ajout de sweat-\/shirt et le téléchargement de l\textquotesingle{}image.
+
+@\+Route("{}/admin"{}, name="{}app\+\_\+admin"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Request & {\em \$request} & La requête HTTP. \\
+\hline
+Entity\+Manager\+Interface & {\em \$em} & L\textquotesingle{}interface pour gérer les entités Doctrine. \\
+\hline
+Slugger\+Interface & {\em \$slugger} & Le service pour générer un slug à partir du nom de fichier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La réponse contenant la vue du formulaire et la liste des sweat-\/shirts. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_admin_controller_8php}{Admin\+Controller.\+php}}\end{DoxyCompactItemize}

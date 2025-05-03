@@ -1,0 +1,77 @@
+\doxysection{Référence de la classe App\textbackslash{}Repository\textbackslash{}User\+Repository}
+\hypertarget{class_app_1_1_repository_1_1_user_repository}{}\label{class_app_1_1_repository_1_1_user_repository}\index{App\textbackslash{}Repository\textbackslash{}UserRepository@{App\textbackslash{}Repository\textbackslash{}UserRepository}}
+
+
+Repository pour l\textquotesingle{}entité User.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Repository\textbackslash{}User\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.895093cm]{class_app_1_1_repository_1_1_user_repository}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_repository_1_1_user_repository_a9798d36538da6fd3f77a23b4c8100e14}{\+\_\+\+\_\+construct}} (Manager\+Registry \$registry)
+\begin{DoxyCompactList}\small\item\em Constructeur du repository User. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_repository_1_1_user_repository_a2049a93ba06a29d7664a1f5ca53969af}{upgrade\+Password}} (Password\+Authenticated\+User\+Interface \$user, string \$new\+Hashed\+Password)
+\begin{DoxyCompactList}\small\item\em Met à jour automatiquement (rehash) le mot de passe de l\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Repository pour l\textquotesingle{}entité User. 
+
+Fournit des méthodes d\textquotesingle{}accès aux utilisateurs enregistrés en base de données. Implémente Password\+Upgrader\+Interface pour permettre la mise à jour automatique des mots de passe hashés.
+
+$<$\+User$>$ 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_app_1_1_repository_1_1_user_repository_a9798d36538da6fd3f77a23b4c8100e14}\index{App\textbackslash{}Repository\textbackslash{}UserRepository@{App\textbackslash{}Repository\textbackslash{}UserRepository}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!App\textbackslash{}Repository\textbackslash{}UserRepository@{App\textbackslash{}Repository\textbackslash{}UserRepository}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_repository_1_1_user_repository_a9798d36538da6fd3f77a23b4c8100e14} 
+App\textbackslash{}\+Repository\textbackslash{}\+User\+Repository\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Manager\+Registry}]{\$registry}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur du repository User. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Manager\+Registry & {\em \$registry} & Le registre des gestionnaires Doctrine. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_repository_1_1_user_repository_a2049a93ba06a29d7664a1f5ca53969af}\index{App\textbackslash{}Repository\textbackslash{}UserRepository@{App\textbackslash{}Repository\textbackslash{}UserRepository}!upgradePassword@{upgradePassword}}
+\index{upgradePassword@{upgradePassword}!App\textbackslash{}Repository\textbackslash{}UserRepository@{App\textbackslash{}Repository\textbackslash{}UserRepository}}
+\doxysubsubsection{\texorpdfstring{upgradePassword()}{upgradePassword()}}
+{\footnotesize\ttfamily \label{class_app_1_1_repository_1_1_user_repository_a2049a93ba06a29d7664a1f5ca53969af} 
+App\textbackslash{}\+Repository\textbackslash{}\+User\+Repository\+::upgrade\+Password (\begin{DoxyParamCaption}\item[{Password\+Authenticated\+User\+Interface}]{\$user}{, }\item[{string}]{\$new\+Hashed\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour automatiquement (rehash) le mot de passe de l\textquotesingle{}utilisateur. 
+
+Cette méthode est appelée automatiquement par Symfony si la stratégie de mise à jour de mot de passe est activée. Elle sert à rehasher les mots de passe selon les nouvelles règles de sécurité définies.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Password\+Authenticated\+User\+Interface & {\em \$user} & L\textquotesingle{}utilisateur dont le mot de passe doit être mis à jour. \\
+\hline
+string & {\em \$new\+Hashed\+Password} & Le nouveau mot de passe hashé.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unsupported\+User\+Exception} & Si l\textquotesingle{}utilisateur passé en paramètre n\textquotesingle{}est pas une instance de User. \\
+\hline
+\end{DoxyExceptions}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Repository/\mbox{\hyperlink{_user_repository_8php}{User\+Repository.\+php}}\end{DoxyCompactItemize}

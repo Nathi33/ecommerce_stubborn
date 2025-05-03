@@ -1,0 +1,51 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Home\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_home_controller}{}\label{class_app_1_1_controller_1_1_home_controller}\index{App\textbackslash{}Controller\textbackslash{}HomeController@{App\textbackslash{}Controller\textbackslash{}HomeController}}
+
+
+Contrôleur responsable de l\textquotesingle{}affichage de la page d\textquotesingle{}accueil.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Home\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_home_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_home_controller_a2c188774f252c27dd44078a428496f35}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_sweatshirt_repository}{Sweatshirt\+Repository}} \$sweatshirt\+Repository)
+\begin{DoxyCompactList}\small\item\em Affiche la page d\textquotesingle{}accueil avec les sweat-\/shirts en avant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur responsable de l\textquotesingle{}affichage de la page d\textquotesingle{}accueil. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_home_controller_a2c188774f252c27dd44078a428496f35}\index{App\textbackslash{}Controller\textbackslash{}HomeController@{App\textbackslash{}Controller\textbackslash{}HomeController}!index@{index}}
+\index{index@{index}!App\textbackslash{}Controller\textbackslash{}HomeController@{App\textbackslash{}Controller\textbackslash{}HomeController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_home_controller_a2c188774f252c27dd44078a428496f35} 
+App\textbackslash{}\+Controller\textbackslash{}\+Home\+Controller\+::index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_sweatshirt_repository}{Sweatshirt\+Repository}}}]{\$sweatshirt\+Repository}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la page d\textquotesingle{}accueil avec les sweat-\/shirts en avant. 
+
+Cette méthode récupère les sweat-\/shirts qui sont marqués comme "{}en avant"{} dans la base de données et les affiche sur la page d\textquotesingle{}accueil.
+
+@\+Route("{}/"{}, name="{}app\+\_\+home"{})
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Sweatshirt\+Repository & {\em \$sweatshirt\+Repository} & Le repository des sweat-\/shirts pour interroger la base de données. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response La réponse HTTP qui contient la vue avec les sweat-\/shirts en avant. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_home_controller_8php}{Home\+Controller.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\doxysection{Référence de la classe App\textbackslash{}Controller\textbackslash{}Security\+Controller}
+\hypertarget{class_app_1_1_controller_1_1_security_controller}{}\label{class_app_1_1_controller_1_1_security_controller}\index{App\textbackslash{}Controller\textbackslash{}SecurityController@{App\textbackslash{}Controller\textbackslash{}SecurityController}}
+
+
+Contrôleur de sécurité gérant l\textquotesingle{}authentification des utilisateurs.  
+
+
+Graphe d\textquotesingle{}héritage de App\textbackslash{}Controller\textbackslash{}Security\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_security_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_security_controller_a75b7a71316e41d2e14e7617cf8563ee5}{login}} (Authentication\+Utils \$authentication\+Utils)
+\begin{DoxyCompactList}\small\item\em Affiche la page de connexion et gère les erreurs éventuelles de login. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_security_controller_a3ca7e065b941ff0036b65d4351081934}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Route de déconnexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contrôleur de sécurité gérant l\textquotesingle{}authentification des utilisateurs. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_app_1_1_controller_1_1_security_controller_a75b7a71316e41d2e14e7617cf8563ee5}\index{App\textbackslash{}Controller\textbackslash{}SecurityController@{App\textbackslash{}Controller\textbackslash{}SecurityController}!login@{login}}
+\index{login@{login}!App\textbackslash{}Controller\textbackslash{}SecurityController@{App\textbackslash{}Controller\textbackslash{}SecurityController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_security_controller_a75b7a71316e41d2e14e7617cf8563ee5} 
+App\textbackslash{}\+Controller\textbackslash{}\+Security\+Controller\+::login (\begin{DoxyParamCaption}\item[{Authentication\+Utils}]{\$authentication\+Utils}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la page de connexion et gère les erreurs éventuelles de login. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+Authentication\+Utils & {\em \$authentication\+Utils} & Utilitaire pour récupérer les informations d\textquotesingle{}authentification\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Response 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_controller_1_1_security_controller_a3ca7e065b941ff0036b65d4351081934}\index{App\textbackslash{}Controller\textbackslash{}SecurityController@{App\textbackslash{}Controller\textbackslash{}SecurityController}!logout@{logout}}
+\index{logout@{logout}!App\textbackslash{}Controller\textbackslash{}SecurityController@{App\textbackslash{}Controller\textbackslash{}SecurityController}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controller_1_1_security_controller_a3ca7e065b941ff0036b65d4351081934} 
+App\textbackslash{}\+Controller\textbackslash{}\+Security\+Controller\+::logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Route de déconnexion. 
+
+Cette méthode ne sera jamais exécutée, car Symfony intercepte cette route automatiquement via la configuration du pare-\/feu ({\ttfamily firewall.\+logout}).
+
+\begin{DoxyReturn}{Renvoie}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Logic\+Exception 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{_security_controller_8php}{Security\+Controller.\+php}}\end{DoxyCompactItemize}
