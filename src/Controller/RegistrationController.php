@@ -19,12 +19,21 @@ use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
+/**
+ * Contrôleur de gestion des inscriptions et de la vérification des emails.
+ */
 class RegistrationController extends AbstractController
 {
     //private EmailVerifier $emailVerifier;
     private UserAuthenticatorInterface $userAuthenticator;
     private AuthAuthenticator $authenticator;
 
+    /**
+     * Constructeur.
+     *
+     * @param UserAuthenticatorInterface $userAuthenticator Gestion de l'authentification utilisateur.
+     * @param AuthAuthenticator $authenticator Authenticator personnalisé.
+     */
     public function __construct(UserAuthenticatorInterface $userAuthenticator, AuthAuthenticator $authenticator)
     {
         //$this->emailVerifier = $emailVerifier;
@@ -32,6 +41,18 @@ class RegistrationController extends AbstractController
         $this->authenticator= $authenticator;
     }
 
+    /**
+     * Page d'inscription et envoi de l'email de vérification.
+     *
+     * @Route("/register", name="app_register")
+     *
+     * @param Request $request Requête HTTP.
+     * @param UserPasswordHasherInterface $userPasswordHasher Service de hachage du mot de passe.
+     * @param EntityManagerInterface $entityManager Gestionnaire d'entité Doctrine.
+     * @param TokenGeneratorInterface $tokenGenerator Générateur de jetons sécurisés.
+     * @param MailerInterface $mailer Service d'envoi de mails.
+     * @return Response La vue d'inscription ou de vérification.
+     */
     #[Route('/register', name: 'app_register')]
     public function register(
         Request $request, 
@@ -98,6 +119,20 @@ class RegistrationController extends AbstractController
         ]);
     }
 
+    /**
+     * Vérifie le lien de confirmation d’email et connecte l’utilisateur.
+     *
+     * @Route("/verify/email/{id}/{token}/{signature}/{expires}", name="app_verify_email")
+     *
+     * @param int $id Identifiant de l'utilisateur.
+     * @param string $token Jeton de vérification.
+     * @param string $signature Signature de sécurité.
+     * @param int $expires Timestamp d'expiration du lien.
+     * @param Request $request Requête HTTP.
+     * @param TranslatorInterface $translator Service de traduction (non utilisé ici).
+     * @param EntityManagerInterface $entityManager Gestionnaire d'entité.
+     * @return Response Redirection vers la page d’accueil ou d’erreur.
+     */
     #[Route('/verify/email/{id}/{token}/{signature}/{expires}', name: 'app_verify_email')]
     public function verifyUserEmail(
         int $id,

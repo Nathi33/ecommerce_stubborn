@@ -1,7 +1,5 @@
 <?php
 
-// tests/Controller/CartControllerTest.php
-
 namespace App\Tests\Controller;
 
 use App\Entity\Sweatshirt;
@@ -9,13 +7,17 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CartControllerTest extends WebTestCase
 {
-    // Test pour ajouter un sweatshirt au panier
+    /**
+     * Test pour ajouter un sweatshirt au panier.
+     * Ce test vérifie si un utilisateur peut ajouter un sweatshirt au panier en envoyant une requête POST
+     * avec un identifiant de sweatshirt et une taille. On vérifie que l'utilisateur est redirigé vers la page du panier.
+     */
     public function testAddToCart()
     {
-        // Créez un client HTTP pour tester les requêtes
+        // Crée un client HTTP pour tester les requêtes
         $client = static::createClient();
 
-        // Créez un sweatshirt fictif pour le test
+        // Crée un sweatshirt fictif pour le test
         $sweatshirt = new Sweatshirt();
         $sweatshirt->setName('Test Sweatshirt');
         $sweatshirt->setPrice(50);
@@ -25,21 +27,25 @@ class CartControllerTest extends WebTestCase
         $sweatshirt->setStockM(10);
         $sweatshirt->setStockL(10);
         $sweatshirt->setStockXl(10);
-        // Remarque: vous devez persister l'entité pour que son ID soit disponible
+    
+        // Persiste l'entité pour que son ID soit disponible pour l'ajout au panier
         $entityManager = self::getContainer()->get('doctrine')->getManager();
         $entityManager->persist($sweatshirt);
         $entityManager->flush();
 
-        // Simulez une requête POST pour ajouter au panier avec la taille choisie
+        // Simule une requête POST pour ajouter au panier avec la taille choisie
         $crawler = $client->request('POST', '/cart/add/'.$sweatshirt->getId(), [
             'size' => 'L',
         ]);
 
-        // Vérifiez que la réponse est une redirection vers le panier
+        // Vérifie que la réponse est une redirection vers le panier
         $this->assertResponseRedirects('/cart');
     }
 
-    // Test pour afficher le panier
+    /**
+     * Test pour afficher les articles dans le panier.
+     * Ce test vérifie que les articles ajoutés à la session sont correctement affichés sur la page du panier.
+     */
     public function testCartDisplaysItemsCorrectly()
     {
         $client = static::createClient();
@@ -71,12 +77,16 @@ class CartControllerTest extends WebTestCase
         $this->assertSelectorTextContains('body', 'M');
     }
 
-    // Test pour supprimer un sweatshirt du panier
+    /**
+     * Test pour supprimer un sweatshirt du panier.
+     * Ce test vérifie que lorsqu'un utilisateur soumet une requête pour supprimer un article du panier,
+     * l'article est correctement retiré et l'utilisateur est redirigé vers la page du panier.
+     */
     public function testRemoveFromCart(): void
     {
         $client = static::createClient();
 
-        // Préparer la session avec un article
+        // Prépare la session avec un article
         $session = self::getContainer()->get('session.factory')->createSession();
         $cart = [[
             'id' => 1,
@@ -88,25 +98,29 @@ class CartControllerTest extends WebTestCase
         $session->set('cart', $cart);
         $session->save();
 
-        // Injecter la session dans le client (cookie)
+        // Injecte la session dans le client (cookie)
         $client->getCookieJar()->set(new \Symfony\Component\BrowserKit\Cookie($session->getName(), $session->getId()));
 
-        // Charger la page du panier (elle contient normalement les formulaires avec le token CSRF)
+        // Charge la page du panier (elle contient normalement les formulaires avec le token CSRF)
         $crawler = $client->request('GET', '/cart');
 
-        // Récupérer le token CSRF depuis l’attribut _token du formulaire de suppression
+        // Récupére le token CSRF depuis l’attribut _token du formulaire de suppression
         $token = $crawler->filter('form')->first()->filter('input[name="_token"]')->attr('value');
 
-        // Envoyer la requête POST pour supprimer l'article avec le token récupéré
+        // Envoye la requête POST pour supprimer l'article avec le token récupéré
         $client->request('POST', '/cart/remove/0', [
             '_token' => $token,
         ]);
 
-        // Vérifier que l'utilisateur est redirigé vers le panier
+        // Vérifie que l'utilisateur est redirigé vers le panier
         $this->assertResponseRedirects('/cart');
     }
 
-    // Test pour vérifier le total du panier
+    /**
+     * Test pour vérifier le calcul du total du panier.
+     * Ce test vérifie que le total des articles dans le panier est bien calculé et affiché.
+     * Ici, il vérifie que deux articles totalisent correctement 50.
+     */
     public function testCartTotalCalculation(): void
     {
         $client = static::createClient();

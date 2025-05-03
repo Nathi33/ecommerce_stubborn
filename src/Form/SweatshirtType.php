@@ -12,10 +12,24 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-
+/**
+ * Formulaire pour la création ou modification d'un Sweatshirt.
+ *
+ * Ce formulaire permet de renseigner :
+ * - le nom du sweatshirt,
+ * - son prix,
+ * - le stock disponible pour chaque taille (XS à XL),
+ * - une image facultative,
+ * - une option pour le mettre en avant.
+ */
 class SweatshirtType extends AbstractType
 {
+    /**
+     * Construit le formulaire du Sweatshirt.
+     *
+     * @param FormBuilderInterface $builder Le constructeur de formulaire
+     * @param array $options Les options du formulaire
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -51,6 +65,11 @@ class SweatshirtType extends AbstractType
             ]);
     }
 
+    /**
+     * Configure les options du formulaire, notamment la classe de données associée.
+     *
+     * @param OptionsResolver $resolver Le résolveur d'options
+     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
